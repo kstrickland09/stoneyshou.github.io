@@ -413,7 +413,7 @@ function LEI() {
 				height:16px;\
 				cursor:pointer;\
 				float:left;\
-				margin:0px 5px 0px 5px;\
+				margin:4px 5px 0px 5px;\
 				vertical-align:middle;\
 			}\
 			.LEIFilterIcon{\
@@ -422,7 +422,7 @@ function LEI() {
 				height:16px;\
 				float:left;\
 				cursor:pointer;\
-				margin:0px 5px 0px 5px;\
+				margin:4px 5px 0px 5px;\
 			}\
 			.LEILogTitle{\
 				vertical-align:middle;\
@@ -687,9 +687,9 @@ function LEI() {
     };
 
     this.generateHTML = function (){
-        this.logCtrlPanelHTML = "<a id='LEILogPlay' href='javascript:;'><img id='LEILogPlayImg' src='"+this.baseURL+"images/pause.png' border='0'></img></a>  \
-                                <a id='LEILogStop' href='javascript:;'><img id='LEILogStopImg' src='"+this.baseURL+"images/stop.png' border='0'></img></a>  \
-                                <a id='LEILogErase' href='javascript:;'><img id='LEILogEraseImg' src='"+this.baseURL+"images/trashcan.png' border='0'></img></a>  \
+        this.logCtrlPanelHTML = "<div id='LEILogPlay'><div id='LEILogPlayImg'></div></div>  \
+                                <div id='LEILogStop'><div id='LEILogStopImg'></div></div>  \
+                                <div id='LEILogErase'><div id='LEILogEraseImg'></div></div>  \
                             ";
         this.emtHtml = "<table id='LEIMainTable' cellspacing='0' cellpadding='0' border='0'>\
                             <tbody>\
@@ -698,19 +698,9 @@ function LEI() {
                                         <table id='LEIMainTitleTable' width='100%' height='26px' cellspacing='0' cellpadding='0' border='0'>\
                                             <tbody>\
                                                 <tr>\
-                                                    <!-- <td id='emtDebugTopLeft'></td> -->\
                                                     <td id='emtDebugLogo'></td>\
                                                     <td id='LEIMainTitle'>Inspect Tool ver: "+this.ver+"</td>\
                                                     <td id='LEIMinimize'>\
-                                                        <!-- <a href='javascript:;' alt='Show Config' title='Show Config'>\
-                                                            <img id='LEIImgConfig' border='0' src='"+this.baseURL+"images/config.gif'></img>\
-                                                        </a>\
-                                                       <a href='javascript:;' alt='Admin Area' title='Admin Area'>\
-                                                            <img id='LEIImgAdmin' border='0' src='"+this.baseURL+"images/admin.gif'></img>\
-                                                        </a>\
-                                                        <a href='javascript:;' alt='Visitor Logoff' title='Visitor Logoff'>\
-                                                            <img id='LEIImgLogoff' border='0' src='"+this.baseURL+"images/logout.gif'></img>\
-                                                        </a> -->\
                                                         <div class='LEIMiniWrapper'>\
                                                         	<a href='javascript:;' alt='Close' title='Close'>\
                                                             <div id='LEIImgClose' class='LEICloseBtn'></div></a>\
@@ -720,7 +710,6 @@ function LEI() {
                                                             <div id='LEIImgMinimize' class='LEIMiniBtn'></div></a>\
                                                         </div>\
                                                     </td>\
-                                                    <!-- <td id='LEITopRight'></td> -->\
                                                 </tr>\
                                             </tbody>\
                                         </table>\
