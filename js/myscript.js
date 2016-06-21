@@ -398,7 +398,7 @@ function LEI() {
 			}\
 			\
 			#LEIImgShowTools{\
-			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -1100px -19px no-repeat;\
+			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -1100px -20px no-repeat;\
 				width:16px;\
 				height:16px;\
 			}\
@@ -836,16 +836,7 @@ function LEI() {
                                     </td>\
                                 </tr>\
                             </tbody>\
-                        </table>\
-                        <div id='LEIToolsDiv'>\
-                                    <table id='LEIToolsTable'> \
-                                        <tr >\
-                                            <td id='LEIAbout'>\
-                                                About\
-                                            </td>\
-                                        </tr>\
-                                    </table>\
-                                </div>";
+                        </table>";
 
         return this.emtHtml;
     };
@@ -1022,20 +1013,20 @@ function LEI() {
   //       elem = this.GetObj('LEIStopStartEMT');
   //       elem.onclick = function () {that.stopStartEMT();};
 
-        elem = this.GetObj('LEIAbout');
-        elem.onclick = function () {that.about();};
+        // elem = this.GetObj('LEIAbout');
+        // elem.onclick = function () {that.about();};
 
-        elem = this.GetObj('LEISwitchSnipMode');
-        elem.onclick = function () {that.clearCompactSnippetMode();};
+        // elem = this.GetObj('LEISwitchSnipMode');
+        // elem.onclick = function () {that.clearCompactSnippetMode();};
 
-        elem = this.GetObj('LEIAdminArea');
-        elem.onclick = function () {that.adminAreaLogin();};
+        // elem = this.GetObj('LEIAdminArea');
+        // elem.onclick = function () {that.adminAreaLogin();};
 
-        elem = this.GetObj('LEIEval');
-        elem.onclick = function () {that.evalTool('display','', true);};
+        // elem = this.GetObj('LEIEval');
+        // elem.onclick = function () {that.evalTool('display','', true);};
 
-        elem = this.GetObj('LEIShowUDEs');
-        elem.onclick = function () {that.showUdes();};
+        // elem = this.GetObj('LEIShowUDEs');
+        // elem.onclick = function () {that.showUdes();};
 
         if (this.msgShown) {
             elem = this.GetObj('LEIStatusResize');
@@ -1502,25 +1493,25 @@ function LEI() {
     //     return false;
     // };
 
-    this.about = function () {
-        //console.log('about');
-        this.toggleTools();
-        if (this.logShown) {
-            this.toggleLog();
-        }
+    // this.about = function () {
+    //     //console.log('about');
+    //     this.toggleTools();
+    //     if (this.logShown) {
+    //         this.toggleLog();
+    //     }
 
-        var html = '<b>LiveEngage Inspect Tool ver: '+this.ver+'</b><br /><br />';
-        html += '<b>Created</b> (Based on the EMTDebugLib Tool) , <b>By</b>: Stoney Shou<br /> ';
-        html += '<b>Company</b>: Liveperson<br /><br />';
-        html += '<b>Disclamer</b>: This is work in progress and should be treated as such.<br />';
-        html += ' No guarantees are given on stability of this tool. Use at your own risk.<br /><br />';
-        html += '<b>However suggestions and bug reports are welcome.<b><br /><br />';
-        html += '<b>Send suggestion <a href="mailto:sshou@liveperson.com?subject=LE Inspect Tool Suggestion">email</a><b><br /><br />';
-        html += '<b>Send bugreport <a href="mailto:sshou@liveperson.com?subject=LE Inspect Tool Bug Report">email</a><b><br />';
+    //     var html = '<b>LiveEngage Inspect Tool ver: '+this.ver+'</b><br /><br />';
+    //     html += '<b>Created</b> (Based on the EMTDebugLib Tool) , <b>By</b>: Stoney Shou<br /> ';
+    //     html += '<b>Company</b>: Liveperson<br /><br />';
+    //     html += '<b>Disclamer</b>: This is work in progress and should be treated as such.<br />';
+    //     html += ' No guarantees are given on stability of this tool. Use at your own risk.<br /><br />';
+    //     html += '<b>However suggestions and bug reports are welcome.<b><br /><br />';
+    //     html += '<b>Send suggestion <a href="mailto:sshou@liveperson.com?subject=LE Inspect Tool Suggestion">email</a><b><br /><br />';
+    //     html += '<b>Send bugreport <a href="mailto:sshou@liveperson.com?subject=LE Inspect Tool Bug Report">email</a><b><br />';
 
-        this.showMsgWindow(false, 'About', html,{width: 400, height: this.maxLogWindowMaxHeight});
-        return false;
-    };
+    //     this.showMsgWindow(false, 'About', html,{width: 400, height: this.maxLogWindowMaxHeight});
+    //     return false;
+    // };
 
     // this.evalTool = function (action, objStr, displayHTML, title) {
     //     //console.log('evalTool'+ action);
@@ -1676,19 +1667,19 @@ function LEI() {
     //     return false;
     // };
 
-    // this.clearCompactSnippetMode = function () {
-    //     //console.log('clearCompactSnippetMode');
-    //     this.toggleTools();
+    this.clearCompactSnippetMode = function () {
+        //console.log('clearCompactSnippetMode');
+        this.toggleTools();
 
-    //     if (this.GetCookie(this.debugCookieName) == this.debugCookieValue) {// it already exists so delete it
-    //         this.DeleteCookie(this.debugCookieName,'/');
-    //     }
-    //     else { // set it
-    //         this.SetCookie(this.debugCookieName,this.debugCookieValue, null, '/');
-    //     }
+        if (this.GetCookie(this.debugCookieName) == this.debugCookieValue) {// it already exists so delete it
+            this.DeleteCookie(this.debugCookieName,'/');
+        }
+        else { // set it
+            this.SetCookie(this.debugCookieName,this.debugCookieValue, null, '/');
+        }
 
-    //     return false;
-    // };
+        return false;
+    };
 
     // this.logOut = function (onlyLogout) {
     //     //console.log('logOut');
@@ -2083,16 +2074,16 @@ function LEI() {
                 }
             }
 
-            elem = this.GetObj('LEISwitchSnipMode');
-            if (this.GetCookie(this.debugCookieName) == this.debugCookieValue) {
-                elem.innerHTML = 'Compact Snip';
-            }
-            else {
-                elem.innerHTML = 'Clear Snip';
-            }
-            if (typeof(lpMTagConfig)=='undefined' || typeof(lpMTagConfig.lpServer)=='undefined' || document.location.host != lpMTagConfig.lpServer) {
-                this.hideObj('LEISwitchSnipMode');
-            }
+            // elem = this.GetObj('LEISwitchSnipMode');
+            // if (this.GetCookie(this.debugCookieName) == this.debugCookieValue) {
+            //     elem.innerHTML = 'Compact Snip';
+            // }
+            // else {
+            //     elem.innerHTML = 'Clear Snip';
+            // }
+            // if (typeof(lpMTagConfig)=='undefined' || typeof(lpMTagConfig.lpServer)=='undefined' || document.location.host != lpMTagConfig.lpServer) {
+            //     this.hideObj('LEISwitchSnipMode');
+            // }
 
             if (typeof(lpMTagConfig)=='undefined' || typeof(lpMTagConfig.lpServer)=='undefined' || typeof(lpMTagConfig.lpNumber)=='undefined') {
                 this.hideObj('LEIAdminArea');
