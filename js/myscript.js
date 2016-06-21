@@ -737,18 +737,12 @@ function LEI() {
                                                     <td colspan='4' id='LEIDomain' class='LEIEMTDivider'>"+this.noValueStr+"</td>\
                                                     <td colspan='2' class = 'LEILable'>Section : </td>\
                                                     <td colspan='2' id='LEIEMTSection' class='LEIEMTDivider'>"+this.noValueStr+"</td>\
-                                                    <!-- <td colspan='3'>STATUS</td> -->\
-                                                    <!-- <td colspan='3'>LECHAT <span id='leChatVer'></span></td> -->\
                                                     <td>\
                                                         <a id='LEIToggleLog' href='javascript:;'>\
                                                             <div id='LEIImgLog'></div>\
                                                         </a>\
                                                     </td>\
-                                                     <td>\
-                                                        <a id='LEIToggleTools' href='javascript:;'>\
-                                                            <div id='LEIImgShowTools'></div>\
-                                                        </a>\
-                                                    </td>\                                               </tr>\
+                                                </tr>\
                                                 <tr class='LEImainTableNumberRow'><td style='height:5px'></td></tr>\
                                                 <tr class='LEImainTableNumberRow'>\
                                                  	<td></td>\
@@ -992,8 +986,8 @@ function LEI() {
         elem = this.GetObj('LEIToggleLog');
         elem.onclick = function () {that.toggleLog();};
 
-        elem = this.GetObj('LEIToggleTools');
-        elem.onclick = function () {that.toggleTools();};
+        // elem = this.GetObj('LEIToggleTools');
+        // elem.onclick = function () {that.toggleTools();};
 
         elem = this.GetObj('LEIImgCloseLog');
         elem.onclick = function () {that.minimizeMsgDiv();};
