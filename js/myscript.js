@@ -3198,10 +3198,4 @@ function LEI() {
     };
 }
 
-var newScript = document.createElement('script'); 
-newScript.type ='text/javascript'; 
-//newScript.src = 'EMTLib.js';
-newScript.appendChild(document.createTextNode(LEI));
-newScript.appendChild(document.createTextNode("var lpMTagDebug= new LEI();lpMTagDebug.start();"));
 
-document.getElementsByTagName('body')[0].appendChild(newScript);
