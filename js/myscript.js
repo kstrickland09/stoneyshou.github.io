@@ -839,53 +839,53 @@ function LEI() {
                         </table>\
                         <div id='LEIToolsDiv'>\
                                     <table id='LEIToolsTable'> \
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIEMTinfo' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr>\
+                                            <td id='LEIEMTinfo'>\
                                                 Config Info\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIPageinfo' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEIPageinfo'>\
                                                 Page Info\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIShowUDEs' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEIShowUDEs'>\
                                                 Show UDEs\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIAdminArea' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEIAdminArea'>\
                                                 Admin Area\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEILogOut' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEILogOut'>\
                                                 Log Out\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIMarkVisitor' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEIMarkVisitor'>\
                                                 Mark Visitor\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEISwitchSnipMode' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEISwitchSnipMode'>\
                                                 Clear Snip\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIStopStartEMT' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEIStopStartEMT'>\
                                                 Stop EMT\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIEval' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEIEval'>\
                                                 Eval\
                                             </td>\
                                         </tr>\
-                                        <tr onmouseover=\"this.style.background = '#0A246A'\" onmouseout=\"this.style.background='#D4D0C8'\">\
-                                            <td id='LEIAbout' onmouseover=\"this.style.color = 'white'\" onmouseout=\"this.style.color='black'\">\
+                                        <tr >\
+                                            <td id='LEIAbout'>\
                                                 About\
                                             </td>\
                                         </tr>\
