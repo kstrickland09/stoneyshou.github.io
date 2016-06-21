@@ -669,11 +669,11 @@ function LEI() {
         },
         getNumberOfElements: function (type, inPage) {
             var count = 0;
-            if (!lpMTagDebug.leChatRef) {
+            if (!lei.leChatRef) {
                 return 0;
             }
 
-            var arrObjs = inPage ? lpMTagDebug.leChatRef.inPagePluginsArr : lpMTagDebug.leChatRef.jsonsArr;
+            var arrObjs = inPage ? lei.leChatRef.inPagePluginsArr : lei.leChatRef.jsonsArr;
             if (typeof (arrObjs) != "undefined") {
                 for (var id in arrObjs) {
                     if (arrObjs[id].type === type) {
@@ -1825,7 +1825,7 @@ function LEI() {
 
     this.toggleViewMode = function (id) {
         //console.log('toggleViewMode'+id);
-        var elem = lpMTagDebug.GetObj('LEIObjectInfo-'+id);
+        var elem = lei.GetObj('LEIObjectInfo-'+id);
         if (elem!=null) {
             if (elem.style.display=='none' || elem.style.display=='') {
                 elem.style.display='block';
@@ -1886,7 +1886,7 @@ function LEI() {
                     var cnt = this.evalToolCnt++;
                     var retStr = this.objectToString(obj[name],delimiter, tableFormat, tableClass, recursive);
                     if (retStr!='') {
-                        text += "<tr><th><a href=javascript:; onclick='lpMTagDebug.toggleViewMode("+cnt+")'>" + name + "</a></th><td id='LEIObjectInfo-"+cnt+"' class='LEIHiddenTD'>" +retStr + "</td>";
+                        text += "<tr><th><a href=javascript:; onclick='lei.toggleViewMode("+cnt+")'>" + name + "</a></th><td id='LEIObjectInfo-"+cnt+"' class='LEIHiddenTD'>" +retStr + "</td>";
                     }
                     else {
                         text += "<tr><th>" + name + "</th><td id='LEIObjectInfo-"+cnt+"'>" +retStr + "</td>";
@@ -2611,14 +2611,14 @@ function LEI() {
 
         // Capture mousemove and mouseup events on the page.
         if (this.browser == 'IE') {
-            document.attachEvent("onmousemove", lpMTagDebug.resizeGo);
-            document.attachEvent("onmouseup",   lpMTagDebug.resizeStop);
+            document.attachEvent("onmousemove", lei.resizeGo);
+            document.attachEvent("onmouseup",   lei.resizeStop);
             window.event.cancelBubble = true;
             window.event.returnValue = false;
         }
         else {
-            document.addEventListener("mousemove", lpMTagDebug.resizeGo,   true);
-            document.addEventListener("mouseup",   lpMTagDebug.resizeStop, true);
+            document.addEventListener("mousemove", lei.resizeGo,   true);
+            document.addEventListener("mouseup",   lei.resizeStop, true);
             event.preventDefault();
         }
 
@@ -2626,12 +2626,12 @@ function LEI() {
     };
 
     this.resizeGo = function(event) {
-        //console.log('resizeGo'+ ' w='+lpMTagDebug.resizeElStartDimen.width + ' h='+lpMTagDebug.resizeElStartDimen.height + ' curX:'+lpMTagDebug.resizeCursorStartX + ' curY:'+lpMTagDebug.resizeCursorStartY);
+        //console.log('resizeGo'+ ' w='+lei.resizeElStartDimen.width + ' h='+lei.resizeElStartDimen.height + ' curX:'+lei.resizeCursorStartX + ' curY:'+lei.resizeCursorStartY);
 
         var x, y;
 
         // Get cursor position with respect to the page.
-        if (lpMTagDebug.browser == 'IE') {
+        if (lei.browser == 'IE') {
             x = window.event.clientX + document.documentElement.scrollLeft + document.body.scrollLeft;
             y = window.event.clientY + document.documentElement.scrollTop + document.body.scrollTop;
         }
@@ -2639,20 +2639,20 @@ function LEI() {
             x = event.clientX + window.scrollX;
             y = event.clientY + window.scrollY;
         }
-        var width = lpMTagDebug.resizeElStartDimen.width + (x - lpMTagDebug.resizeCursorStartX);
-        var height = lpMTagDebug.resizeElStartDimen.height + (y - lpMTagDebug.resizeCursorStartY);
+        var width = lei.resizeElStartDimen.width + (x - lei.resizeCursorStartX);
+        var height = lei.resizeElStartDimen.height + (y - lei.resizeCursorStartY);
 
         if (width>=0) {
-            lpMTagDebug.resizeObj.style.width = width + 'px';
+            lei.resizeObj.style.width = width + 'px';
         }
         if (height>=0) {
-            lpMTagDebug.resizeObj.style.height = height + 'px';
+            lei.resizeObj.style.height = height + 'px';
         }
 
-        var dimension = lpMTagDebug.getElWidthHeight('LEIMainLogWindow');
+        var dimension = lei.getElWidthHeight('LEIMainLogWindow');
         if (width < dimension.width) {
             if (width>=0) {
-                lpMTagDebug.resizeObj.style.width = (dimension.width) + 'px';
+                lei.resizeObj.style.width = (dimension.width) + 'px';
             }
         }
 
@@ -2662,13 +2662,13 @@ function LEI() {
     this.resizeStop = function() {
         //console.log('resizeStop');
         // Stop capturing mousemove and mouseup events.
-        if (lpMTagDebug.browser == 'IE') {
-            document.detachEvent("onmousemove", lpMTagDebug.resizeGo);
-            document.detachEvent("onmouseup",   lpMTagDebug.resizeStop);
+        if (lei.browser == 'IE') {
+            document.detachEvent("onmousemove", lei.resizeGo);
+            document.detachEvent("onmouseup",   lei.resizeStop);
         }
         else {
-            document.removeEventListener("mousemove", lpMTagDebug.resizeGo,   true);
-            document.removeEventListener("mouseup",   lpMTagDebug.resizeStop, true);
+            document.removeEventListener("mousemove", lei.resizeGo,   true);
+            document.removeEventListener("mouseup",   lei.resizeStop, true);
         }
 
         return false;
@@ -2740,14 +2740,14 @@ function LEI() {
 
         // Capture mousemove and mouseup events on the page.
         if (this.browser == 'IE') {
-            document.attachEvent("onmousemove", lpMTagDebug.dragGo);
-            document.attachEvent("onmouseup",   lpMTagDebug.dragStop);
+            document.attachEvent("onmousemove", lei.dragGo);
+            document.attachEvent("onmouseup",   lei.dragStop);
             window.event.cancelBubble = true;
             window.event.returnValue = false;
         }
         else {
-            document.addEventListener("mousemove", lpMTagDebug.dragGo,   true);
-            document.addEventListener("mouseup",   lpMTagDebug.dragStop, true);
+            document.addEventListener("mousemove", lei.dragGo,   true);
+            document.addEventListener("mouseup",   lei.dragStop, true);
             event.preventDefault();
         }
         return false;
@@ -2758,7 +2758,7 @@ function LEI() {
         var x, y;
 
         // Get cursor position with respect to the page.
-        if (lpMTagDebug.browser == 'IE') {
+        if (lei.browser == 'IE') {
             x = window.event.clientX + document.documentElement.scrollLeft + document.body.scrollLeft;
             y = window.event.clientY + document.documentElement.scrollTop + document.body.scrollTop;
         }
@@ -2768,18 +2768,18 @@ function LEI() {
         }
         ////console.log('DragGo x='+x +' y='+y);
         // Move drag element by the same amount the cursor has moved.
-        var posx = lpMTagDebug.dragElStartLeft + x - lpMTagDebug.dragCursorStartX;
+        var posx = lei.dragElStartLeft + x - lei.dragCursorStartX;
         if (posx<1) {
             posx=1;
         }
-        var posy = lpMTagDebug.dragElStartTop  + y - lpMTagDebug.dragCursorStartY;
+        var posy = lei.dragElStartTop  + y - lei.dragCursorStartY;
         if (posy<1) {
             posy=1;
         }
-        lpMTagDebug.dragObj.style.left = posx + "px";
-        lpMTagDebug.dragObj.style.top  = posy + "px";
+        lei.dragObj.style.left = posx + "px";
+        lei.dragObj.style.top  = posy + "px";
 
-        if (lpMTagDebug.browser == 'IE') {
+        if (lei.browser == 'IE') {
             window.event.cancelBubble = true;
             window.event.returnValue = false;
         }
@@ -2792,13 +2792,13 @@ function LEI() {
     this.dragStop = function() {
         ////console.log('DragStop');
         // Stop capturing mousemove and mouseup events.
-        if (lpMTagDebug.browser == 'IE') {
-            document.detachEvent("onmousemove", lpMTagDebug.dragGo);
-            document.detachEvent("onmouseup",   lpMTagDebug.dragStop);
+        if (lei.browser == 'IE') {
+            document.detachEvent("onmousemove", lei.dragGo);
+            document.detachEvent("onmouseup",   lei.dragStop);
         }
         else {
-            document.removeEventListener("mousemove", lpMTagDebug.dragGo,   true);
-            document.removeEventListener("mouseup",   lpMTagDebug.dragStop, true);
+            document.removeEventListener("mousemove", lei.dragGo,   true);
+            document.removeEventListener("mouseup",   lei.dragStop, true);
         }
         return false;
     };
