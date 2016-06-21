@@ -735,7 +735,7 @@ function LEI() {
                                                     <td colspan='2' class='LEILable'>Account : </td>\
                                                     <td colspan='2' class='LEImainTableTopRowAcc LEIEMTDivider' id='LEIEMTsiteId'>"+this.noValueStr+"</td>\
                                                     <td colspan='4' id='LEIDomain' class='LEIEMTDivider'>"+this.noValueStr+"</td>\
-                                                    <td colspan='2' class = 'LEILable'>Section : </td>\
+                                                    <td class = 'LEILable'>Section : </td>\
                                                     <td colspan='2' id='LEIEMTSection' class='LEIEMTDivider'>"+this.noValueStr+"</td>\
                                                     <td>\
                                                         <a id='LEIToggleLog' href='javascript:;'>\
