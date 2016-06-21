@@ -426,6 +426,7 @@ function LEI() {
 			}\
 			.LEILogTitle{\
 				vertical-align:middle;\
+				line-height:24px;\
 				height:24px;\
 			}\
 			.LEIStatusResize {\
