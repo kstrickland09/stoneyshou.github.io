@@ -106,7 +106,7 @@ function LEI() {
 			#LEIImgCloseLog {\
 				width: 16px;\
 				height: 16px;\
-			    background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -680px -19px no-repeat;\
+			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -680px -19px no-repeat;\
 			    padding-top: 2px;\
 			    padding-right: 2px;   \
 			}\
@@ -137,27 +137,27 @@ function LEI() {
 			.LEIMiniBtn {\
 				width: 16px;\
 				height: 16px;\
-				background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -500px 0px no-repeat\
+				background: transparent url(https://stoneyshou.github.io/img/sprite.png) -500px 0px no-repeat\
 			}\
 			.LEITagStatNotFound {\
 				width: 16px;\
 				height: 16px;\
-				background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -300px 0px no-repeat\
+				background: transparent url(https://stoneyshou.github.io/img/sprite.png) -300px 0px no-repeat\
 			}\
 			.LEITagStatOk {\
 				width: 16px;\
 				height: 16px;\
-				background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -260px 0px no-repeat\
+				background: transparent url(https://stoneyshou.github.io/img/sprite.png) -260px 0px no-repeat\
 			}\
 			.LEITagStatWarn {\
 				width: 16px;\
 				height: 16px;\
-				background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -260px -40px no-repeat\
+				background: transparent url(https://stoneyshou.github.io/img/sprite.png) -260px -40px no-repeat\
 			}\
 			.LEICloseBtn {\
 				width: 16px;\
 				height: 16px;\
-				background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -680px 0px no-repeat\
+				background: transparent url(https://stoneyshou.github.io/img/sprite.png) -680px 0px no-repeat\
 			}\
 			.LEIMiniWrapper{\
 				float:right;\
@@ -166,7 +166,7 @@ function LEI() {
 			.LEIMaxBtn {\
 				width: 16px;\
 				height: 16px;\
-				background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -500px 0px no-repeat\
+				background: transparent url(https://stoneyshou.github.io/img/sprite.png) -500px 0px no-repeat\
 			}\
 			.LEImainTableTopRowAcc {\
 				background-color: #FF9801;\
@@ -398,17 +398,17 @@ function LEI() {
 			}\
 			\
 			#LEIImgShowTools{\
-			    background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -1780px -19px no-repeat;\
+			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -1100px -19px no-repeat;\
 				width:16px;\
 				height:16px;\
 			}\
 			#LEIImgLog{\
-			    background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -1040px -60px no-repeat;\
+			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -1040px -60px no-repeat;\
 				width:16px;\
 				height:16px;\
 			}\
 			.LEITimeIcon{\
-			    background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -120px -80px no-repeat;\
+			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -120px -80px no-repeat;\
 				width:16px;\
 				height:16px;\
 				cursor:pointer;\
@@ -417,7 +417,7 @@ function LEI() {
 				vertical-align:middle;\
 			}\
 			.LEIFilterIcon{\
-			    background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -1780px -20px no-repeat;\
+			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -1780px -20px no-repeat;\
 				width:16px;\
 				height:16px;\
 				float:left;\
@@ -429,7 +429,7 @@ function LEI() {
 				height:24px;\
 			}\
 			.LEIStatusResize {\
-			    background: transparent url(https://z1-a.le.liveperson.net/src/modules/web-agent/assets/img/16x16-sprite.png) -2160px -19px no-repeat;\
+			    background: transparent url(https://stoneyshou.github.io/img/sprite.png) -2160px -19px no-repeat;\
 			    padding: 0 !important;\
 			    text-align:right;\
 			    width: 16px;\
@@ -839,51 +839,6 @@ function LEI() {
                         </table>\
                         <div id='LEIToolsDiv'>\
                                     <table id='LEIToolsTable'> \
-                                        <tr>\
-                                            <td id='LEIEMTinfo'>\
-                                                Config Info\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEIPageinfo'>\
-                                                Page Info\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEIShowUDEs'>\
-                                                Show UDEs\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEIAdminArea'>\
-                                                Admin Area\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEILogOut'>\
-                                                Log Out\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEIMarkVisitor'>\
-                                                Mark Visitor\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEISwitchSnipMode'>\
-                                                Clear Snip\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEIStopStartEMT'>\
-                                                Stop EMT\
-                                            </td>\
-                                        </tr>\
-                                        <tr >\
-                                            <td id='LEIEval'>\
-                                                Eval\
-                                            </td>\
-                                        </tr>\
                                         <tr >\
                                             <td id='LEIAbout'>\
                                                 About\
@@ -1052,20 +1007,20 @@ function LEI() {
         elem = this.GetObj('LEIImgCloseLog');
         elem.onclick = function () {that.minimizeMsgDiv();};
 
-        elem = this.GetObj('LEIEMTinfo');
-        elem.onclick = function () {that.showEMTinfo();};
+  //       elem = this.GetObj('LEIEMTinfo');
+  //       elem.onclick = function () {that.showEMTinfo();};
 
-        elem = this.GetObj('LEIPageinfo');
-        elem.onclick = function () {that.pageInfo();};
+  //       elem = this.GetObj('LEIPageinfo');
+  //       elem.onclick = function () {that.pageInfo();};
 
-        elem = this.GetObj('LEILogOut');
-        elem.onclick = function () {that.logOut();};
+  //       elem = this.GetObj('LEILogOut');
+  //       elem.onclick = function () {that.logOut();};
 
-		elem = this.GetObj('LEIMarkVisitor');
-        elem.onclick = function () {that.markVisitor();};
+		// elem = this.GetObj('LEIMarkVisitor');
+  //       elem.onclick = function () {that.markVisitor();};
 
-        elem = this.GetObj('LEIStopStartEMT');
-        elem.onclick = function () {that.stopStartEMT();};
+  //       elem = this.GetObj('LEIStopStartEMT');
+  //       elem.onclick = function () {that.stopStartEMT();};
 
         elem = this.GetObj('LEIAbout');
         elem.onclick = function () {that.about();};
@@ -1295,257 +1250,257 @@ function LEI() {
         return false;
     };
 
-    this.dynButtonInfo = function () {
-        //console.log('dynButtonInfo');
-        if (this.toolsShown) {
-            this.toggleTools();
-        }
+    // this.dynButtonInfo = function () {
+    //     //console.log('dynButtonInfo');
+    //     if (this.toolsShown) {
+    //         this.toggleTools();
+    //     }
 
-        if (this.logShown) {
-            this.toggleLog();
-        }
+    //     if (this.logShown) {
+    //         this.toggleLog();
+    //     }
 
-        var that = this;
+    //     var that = this;
 
-        this.overrides = null;
+    //     this.overrides = null;
 
-        var html = '';
-        if (typeof(lpMTagConfig)=='undefined' || typeof(lpMTagConfig.dynButton)=='undefined' || lpMTagConfig.dynButton.length == 0) {
-            html = 'NO buttons defined';
-        }
-        else {
-            for (var i=0; i<lpMTagConfig.dynButton.length; i++) {
-                var multichannel = false;
-                var vosBut = false;
-                var objRef = lpMTagConfig['dynButton'+i];
-                if (objRef==null) {//check if it is not Multichannel
-                    objRef = lpMTagConfig['lpMCDynBut'+i];
-                    if (objRef!=null) {
-                        multichannel = true;
-                    }
-                }
-                if (objRef==null) {//check if it is not Voice single step
-                    objRef = lpMTagConfig['lpVOSDynamicButton'+i];
-                    if (objRef!=null) {
-                        vosBut = true;
-                    }
-                }
+    //     var html = '';
+    //     if (typeof(lpMTagConfig)=='undefined' || typeof(lpMTagConfig.dynButton)=='undefined' || lpMTagConfig.dynButton.length == 0) {
+    //         html = 'NO buttons defined';
+    //     }
+    //     else {
+    //         for (var i=0; i<lpMTagConfig.dynButton.length; i++) {
+    //             var multichannel = false;
+    //             var vosBut = false;
+    //             var objRef = lpMTagConfig['dynButton'+i];
+    //             if (objRef==null) {//check if it is not Multichannel
+    //                 objRef = lpMTagConfig['lpMCDynBut'+i];
+    //                 if (objRef!=null) {
+    //                     multichannel = true;
+    //                 }
+    //             }
+    //             if (objRef==null) {//check if it is not Voice single step
+    //                 objRef = lpMTagConfig['lpVOSDynamicButton'+i];
+    //                 if (objRef!=null) {
+    //                     vosBut = true;
+    //                 }
+    //             }
 
-                html += "<table class='LEIGeneralInfo'>";
-                if (objRef == null) {
-                    html += '<td>Error getting button reference for: '+lpMTagConfig.dynButton[i].name+'</td>';
-                }
-                else {
-                    html += '<tr><th>Name:</th>\
-                             <th>'+((multichannel)?objRef.butConfig.origButtonName:objRef.origButtonName)+'</th></tr>';
-                    var channel = '';
-                    if (multichannel) {
-                        channel = 'Multichannel';
-                    }
-                    else if (typeof(objRef.voice)!='undefined') {
-                        if (objRef.voice) {
-                            if (vosBut) {
-                                channel = 'Voice Single Step';
-                            }
-                            else {
-                                channel = 'Voice';
-                            }
-                        }
-                        else {
-                            channel = 'Chat';
-                        }
-                    }
-                    else {
-                        channel = objRef.channel;
-                    }
-                    html += '<tr><th>Channel:</th>\
-                             <th>'+channel+'</th></tr>';
-                    var state = objRef.buttonState;
-                    if (multichannel) {
-                        state = "<table class='LEIGeneralInfoNoBorder'><tr><th>Chat</th><td>"+objRef.buttonState.chat.name+"</td></tr><tr><th>Voice</th><td>"+objRef.buttonState.voice.name+"</td></tr></table>";
-                    }
-                    html += '<tr><th>State:</th>\
-                             <td>'+state+'</td></tr>';
-                    var url = '';
-                    if (objRef.contentType == 0) {
-                        url = objRef.imageUrl;
-                    }
-                    else if (objRef.contentType == 1) {
-                        url = 'Custom Images';
-                    }
-                    else if (objRef.contentType == 2) {
-                        url = 'HTML button';
-                    }
-                    if (!multichannel) {
-                        html += '<tr><th>Image URL:</th>\
-                                 <td>'+url+'</td></tr>';
-                    }
-                    var refresh;
-                    if (multichannel) {
-                        refresh = objRef.butConfig.refresh;
-                    }
-                    else {
-                        refresh = objRef.refresh;
-                    }
-                    html += '<tr><th>Refresh:</th>\
-                             <td>'+((refresh==-1)?'none':refresh)+'</td></tr>';
-                    html += '<tr><th>Config:</th>\
-                             <td>'+this.objectToString(lpMTagConfig.dynButton[i], undefined, true,'LEIGeneralInfoNoBorder')+'</td></tr>';
-                    html += '<tr><th>Overrides:</th>';
-                    if (typeof(lpMTagConfig.dynButton[i].ovr)!='undefined') {
-                        // there are some overrides so lets see which one
-                        html += "<td><a id='LEIDBover"+i+"' href='javascript:;'>show overrides</a></td></tr>";
-                        if (this.overrides == null) {
-                            this.overrides = {};
-                        }
-                        var dbOvrRef = eval(lpMTagConfig.dynButton[i].ovr);
-                        var text = 'Can not get Object';
-                        if (dbOvrRef!=null) {
-                            text  = this.objectToString(dbOvrRef, undefined, true,'LEIGeneralInfo');
-                        }
-                        this.overrides['LEIDBover'+i] = text;
-                    }
-                    else {
-                        html += '<td>none</td></tr>';
-                    }
-                    var events = '';
-                    if (typeof(this.eventLog.dynButton['but'+i]!='undefined')) {
-                        var length = (typeof(this.eventLog.dynButton['but'+i])!='undefined')?this.eventLog.dynButton['but'+i].length:-1;
-                        for (var j=0; j<length; j++) {
-                            events += this.eventLog.dynButton['but'+i][j] + '<br />';
-                        }
-                    }
-                    if (events=='') {
-                        events = 'None fired';
-                    }
-                    html += '<tr><th>Events Fired:</th>\
-                             <td>'+events+'</td></tr>';
-                    if (multichannel) {
-                        text = this.objectToString(objRef.butConfig, undefined, true,'LEIGeneralInfoNoBorder', true);
-                        if (this.overrides == null) {
-                            this.overrides = {};
-                        }
-                        this.overrides['LEIDBMCover'+i] = text;
-                        html += "<tr><th>Full Config:</th>\
-                             <td><a id='LEIDBMCover"+i+"' href='javascript:;'>Show</td></tr>";
-                    }
-                }
-                html += '</table><br /><br />';
-            }
-        }
+    //             html += "<table class='LEIGeneralInfo'>";
+    //             if (objRef == null) {
+    //                 html += '<td>Error getting button reference for: '+lpMTagConfig.dynButton[i].name+'</td>';
+    //             }
+    //             else {
+    //                 html += '<tr><th>Name:</th>\
+    //                          <th>'+((multichannel)?objRef.butConfig.origButtonName:objRef.origButtonName)+'</th></tr>';
+    //                 var channel = '';
+    //                 if (multichannel) {
+    //                     channel = 'Multichannel';
+    //                 }
+    //                 else if (typeof(objRef.voice)!='undefined') {
+    //                     if (objRef.voice) {
+    //                         if (vosBut) {
+    //                             channel = 'Voice Single Step';
+    //                         }
+    //                         else {
+    //                             channel = 'Voice';
+    //                         }
+    //                     }
+    //                     else {
+    //                         channel = 'Chat';
+    //                     }
+    //                 }
+    //                 else {
+    //                     channel = objRef.channel;
+    //                 }
+    //                 html += '<tr><th>Channel:</th>\
+    //                          <th>'+channel+'</th></tr>';
+    //                 var state = objRef.buttonState;
+    //                 if (multichannel) {
+    //                     state = "<table class='LEIGeneralInfoNoBorder'><tr><th>Chat</th><td>"+objRef.buttonState.chat.name+"</td></tr><tr><th>Voice</th><td>"+objRef.buttonState.voice.name+"</td></tr></table>";
+    //                 }
+    //                 html += '<tr><th>State:</th>\
+    //                          <td>'+state+'</td></tr>';
+    //                 var url = '';
+    //                 if (objRef.contentType == 0) {
+    //                     url = objRef.imageUrl;
+    //                 }
+    //                 else if (objRef.contentType == 1) {
+    //                     url = 'Custom Images';
+    //                 }
+    //                 else if (objRef.contentType == 2) {
+    //                     url = 'HTML button';
+    //                 }
+    //                 if (!multichannel) {
+    //                     html += '<tr><th>Image URL:</th>\
+    //                              <td>'+url+'</td></tr>';
+    //                 }
+    //                 var refresh;
+    //                 if (multichannel) {
+    //                     refresh = objRef.butConfig.refresh;
+    //                 }
+    //                 else {
+    //                     refresh = objRef.refresh;
+    //                 }
+    //                 html += '<tr><th>Refresh:</th>\
+    //                          <td>'+((refresh==-1)?'none':refresh)+'</td></tr>';
+    //                 html += '<tr><th>Config:</th>\
+    //                          <td>'+this.objectToString(lpMTagConfig.dynButton[i], undefined, true,'LEIGeneralInfoNoBorder')+'</td></tr>';
+    //                 html += '<tr><th>Overrides:</th>';
+    //                 if (typeof(lpMTagConfig.dynButton[i].ovr)!='undefined') {
+    //                     // there are some overrides so lets see which one
+    //                     html += "<td><a id='LEIDBover"+i+"' href='javascript:;'>show overrides</a></td></tr>";
+    //                     if (this.overrides == null) {
+    //                         this.overrides = {};
+    //                     }
+    //                     var dbOvrRef = eval(lpMTagConfig.dynButton[i].ovr);
+    //                     var text = 'Can not get Object';
+    //                     if (dbOvrRef!=null) {
+    //                         text  = this.objectToString(dbOvrRef, undefined, true,'LEIGeneralInfo');
+    //                     }
+    //                     this.overrides['LEIDBover'+i] = text;
+    //                 }
+    //                 else {
+    //                     html += '<td>none</td></tr>';
+    //                 }
+    //                 var events = '';
+    //                 if (typeof(this.eventLog.dynButton['but'+i]!='undefined')) {
+    //                     var length = (typeof(this.eventLog.dynButton['but'+i])!='undefined')?this.eventLog.dynButton['but'+i].length:-1;
+    //                     for (var j=0; j<length; j++) {
+    //                         events += this.eventLog.dynButton['but'+i][j] + '<br />';
+    //                     }
+    //                 }
+    //                 if (events=='') {
+    //                     events = 'None fired';
+    //                 }
+    //                 html += '<tr><th>Events Fired:</th>\
+    //                          <td>'+events+'</td></tr>';
+    //                 if (multichannel) {
+    //                     text = this.objectToString(objRef.butConfig, undefined, true,'LEIGeneralInfoNoBorder', true);
+    //                     if (this.overrides == null) {
+    //                         this.overrides = {};
+    //                     }
+    //                     this.overrides['LEIDBMCover'+i] = text;
+    //                     html += "<tr><th>Full Config:</th>\
+    //                          <td><a id='LEIDBMCover"+i+"' href='javascript:;'>Show</td></tr>";
+    //                 }
+    //             }
+    //             html += '</table><br /><br />';
+    //         }
+    //     }
 
-        this.showMsgWindow(false, 'Dynamic Button Info', html,{width: 400, height: that.maxLogWindowMaxHeight});
+    //     this.showMsgWindow(false, 'Dynamic Button Info', html,{width: 400, height: that.maxLogWindowMaxHeight});
 
-        if (this.overrides != null) {
-            var elem;
-            for (var name in this.overrides) {
-                elem = this.GetObj(name);
-                elem.onclick = function () {
-                    that.showMsgWindow(false, 'Dynamic Button Config', that.overrides[this.id],{width: 400, height: that.maxLogWindowMaxHeight});
-                };
-            }
-        }
-        return false;
-    };
+    //     if (this.overrides != null) {
+    //         var elem;
+    //         for (var name in this.overrides) {
+    //             elem = this.GetObj(name);
+    //             elem.onclick = function () {
+    //                 that.showMsgWindow(false, 'Dynamic Button Config', that.overrides[this.id],{width: 400, height: that.maxLogWindowMaxHeight});
+    //             };
+    //         }
+    //     }
+    //     return false;
+    // };
 
-    this.getInviteID = function (name) {
-        var invID = parseInt(name.replace(/invite/,''),10);
-        if (isNaN(invID)) {//maybe MC
-            invID = parseInt(name.replace(/inviteMC/,''),10);
-        }
-        return invID;
-    };
+    // this.getInviteID = function (name) {
+    //     var invID = parseInt(name.replace(/invite/,''),10);
+    //     if (isNaN(invID)) {//maybe MC
+    //         invID = parseInt(name.replace(/inviteMC/,''),10);
+    //     }
+    //     return invID;
+    // };
 
-    this.getInviteOverrideInfo = function () {
-        var str = "<b>Invitation Overrides</b><br /><table class='LEIGeneralInfo'>";
-        for (var name in lpMTagConfig) {
-            if (name.indexOf('invite')!=-1) {
-                if (name!='inviteShown') {
-                    if (isNaN(this.getInviteID(name))) {
-                        str += '<tr><th>'+name+'</th>\
-                                <td>'+lpMTagConfig[name]+'</td></tr>';
-                    }
-                }
-            }
-        }
-        str += "</table>";
-        return str;
-    };
+    // this.getInviteOverrideInfo = function () {
+    //     var str = "<b>Invitation Overrides</b><br /><table class='LEIGeneralInfo'>";
+    //     for (var name in lpMTagConfig) {
+    //         if (name.indexOf('invite')!=-1) {
+    //             if (name!='inviteShown') {
+    //                 if (isNaN(this.getInviteID(name))) {
+    //                     str += '<tr><th>'+name+'</th>\
+    //                             <td>'+lpMTagConfig[name]+'</td></tr>';
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     str += "</table>";
+    //     return str;
+    // };
 
-    this.invitationInfo = function () {
-        //console.log('invitationInfo');
-        if (this.toolsShown) {
-            this.toggleTools();
-        }
+    // this.invitationInfo = function () {
+    //     //console.log('invitationInfo');
+    //     if (this.toolsShown) {
+    //         this.toggleTools();
+    //     }
 
-        if (this.logShown) {
-            this.toggleLog();
-        }
+    //     if (this.logShown) {
+    //         this.toggleLog();
+    //     }
 
-        var html = '';
-        if (typeof(lpMTagConfig)=='undefined') {
-            html = 'NO invitations defined';
-        }
-        else {
-            html += "<table class='LEIGeneralInfo'>";
-            for (var name in lpMTagConfig) {
-                if (name.indexOf('invite')!=-1) {
-                    var invID = this.getInviteID(name);
+    //     var html = '';
+    //     if (typeof(lpMTagConfig)=='undefined') {
+    //         html = 'NO invitations defined';
+    //     }
+    //     else {
+    //         html += "<table class='LEIGeneralInfo'>";
+    //         for (var name in lpMTagConfig) {
+    //             if (name.indexOf('invite')!=-1) {
+    //                 var invID = this.getInviteID(name);
 
-                    if (invID>0) {
-                        var objRef = lpMTagConfig[name];
-                        html += '<tr><th>ID:</th>\
-                                 <th>'+objRef.inviteID+'</th></tr>';
-                        if (objRef.inviteName) {
-                            html += '<tr><th>Name:</th>\
-                                 <th>'+objRef.inviteName+'</th></tr>';
-                        }
-                        var channel = '';
-                        if (typeof(objRef.voice)!='undefined') {
-                            if (objRef.voice) {
-                                channel = 'Voice';
-                            }
-                            else {
-                                channel = 'Chat';
-                            }
-                        }
-                        else {
-                            channel = objRef.channel;
-                        }
-                        html += '<tr><th>Channel:</th>\
-                                 <th>'+channel+'</th></tr>';
+    //                 if (invID>0) {
+    //                     var objRef = lpMTagConfig[name];
+    //                     html += '<tr><th>ID:</th>\
+    //                              <th>'+objRef.inviteID+'</th></tr>';
+    //                     if (objRef.inviteName) {
+    //                         html += '<tr><th>Name:</th>\
+    //                              <th>'+objRef.inviteName+'</th></tr>';
+    //                     }
+    //                     var channel = '';
+    //                     if (typeof(objRef.voice)!='undefined') {
+    //                         if (objRef.voice) {
+    //                             channel = 'Voice';
+    //                         }
+    //                         else {
+    //                             channel = 'Chat';
+    //                         }
+    //                     }
+    //                     else {
+    //                         channel = objRef.channel;
+    //                     }
+    //                     html += '<tr><th>Channel:</th>\
+    //                              <th>'+channel+'</th></tr>';
 
-                        var url = '';
-                        if (objRef.contentType == 0) {
-                            url = objRef.imageUrl;
-                        }
-                        else if (objRef.contentType == 2) {
-                            url = 'HTML invite';
-                        }
-                        html += '<tr><th>Image URL:</th>\
-                                 <td>'+url+'</td></tr>';
-                        var events = '';
-                        if (typeof(this.eventLog.invite['inv'+invID]!='undefined')) {
-                            for (var j=0; j<this.eventLog.invite['inv'+invID].length; j++) {
-                                events += this.eventLog.invite['inv'+invID][j] + '<br />';
-                            }
-                        }
-                        if (events=='') {
-                            events = 'None fired';
-                        }
-                        html += '<tr><th>Events Fired:</th>\
-                                 <td>'+events+'</td></tr>';
-                    }
-                }
-            }
-            html += '</table><br /><br />';
-            html += this.getInviteOverrideInfo();
-        }
+    //                     var url = '';
+    //                     if (objRef.contentType == 0) {
+    //                         url = objRef.imageUrl;
+    //                     }
+    //                     else if (objRef.contentType == 2) {
+    //                         url = 'HTML invite';
+    //                     }
+    //                     html += '<tr><th>Image URL:</th>\
+    //                              <td>'+url+'</td></tr>';
+    //                     var events = '';
+    //                     if (typeof(this.eventLog.invite['inv'+invID]!='undefined')) {
+    //                         for (var j=0; j<this.eventLog.invite['inv'+invID].length; j++) {
+    //                             events += this.eventLog.invite['inv'+invID][j] + '<br />';
+    //                         }
+    //                     }
+    //                     if (events=='') {
+    //                         events = 'None fired';
+    //                     }
+    //                     html += '<tr><th>Events Fired:</th>\
+    //                              <td>'+events+'</td></tr>';
+    //                 }
+    //             }
+    //         }
+    //         html += '</table><br /><br />';
+    //         html += this.getInviteOverrideInfo();
+    //     }
 
-        this.showMsgWindow(false, 'Invitation Info', html,{width: 400, height: this.maxLogWindowMaxHeight});
+    //     this.showMsgWindow(false, 'Invitation Info', html,{width: 400, height: this.maxLogWindowMaxHeight});
 
-        return false;
-    };
+    //     return false;
+    // };
 
     this.about = function () {
         //console.log('about');
@@ -1567,261 +1522,261 @@ function LEI() {
         return false;
     };
 
-    this.evalTool = function (action, objStr, displayHTML, title) {
-        //console.log('evalTool'+ action);
-        if (this.logShown) {
-            this.toggleLog();
-        }
-        if (this.toolsShown) {
-            this.toggleTools();
-        }
+    // this.evalTool = function (action, objStr, displayHTML, title) {
+    //     //console.log('evalTool'+ action);
+    //     if (this.logShown) {
+    //         this.toggleLog();
+    //     }
+    //     if (this.toolsShown) {
+    //         this.toggleTools();
+    //     }
 
-        this.evalToolCnt = 0;
-        var html = "<table id='LEIEvalTable' class='LEIGeneralInfoNoBorder'>\
-                    <tr><td rowspan=2>\
-                            <textarea id='LEIEvalInput' rows='3' cols='40'>{VALUE}</textarea>\
-                        </td>\
-                        <td>\
-                            <input type='button' id='LEIEvalRun' value='Execute' class='LEIEvalToolBtn'></input><br />\
-                        </td></tr><tr><td>\
-                            <input type='button' id='LEIEvalContent' value='Show Content' class='LEIEvalToolBtn'></input><br />\
-                        </td>\
-                    </tr>\
-                   </table>";
-                html += "<hr />";
+    //     this.evalToolCnt = 0;
+    //     var html = "<table id='LEIEvalTable' class='LEIGeneralInfoNoBorder'>\
+    //                 <tr><td rowspan=2>\
+    //                         <textarea id='LEIEvalInput' rows='3' cols='40'>{VALUE}</textarea>\
+    //                     </td>\
+    //                     <td>\
+    //                         <input type='button' id='LEIEvalRun' value='Execute' class='LEIEvalToolBtn'></input><br />\
+    //                     </td></tr><tr><td>\
+    //                         <input type='button' id='LEIEvalContent' value='Show Content' class='LEIEvalToolBtn'></input><br />\
+    //                     </td>\
+    //                 </tr>\
+    //                </table>";
+    //             html += "<hr />";
 
-        if (typeof(title)=='undefined') {
-            title = "Eval Tool\
-                    <a id='LEIEvallpMTagConfig' href=javascript:;>lpMTagConfig</a>\
-                    <a id='LEIEvallpMTag' href=javascript:;>lpMTag</a>\
-                    <a id='LEIEvallpConnLib' href=javascript:;>lpConnLib</a>";
-        }
-        var value;
-        if (action == 'display') {
-            this.showMsgWindow(false, title, html.replace(/{VALUE}/g,''),{width: 400, height: this.maxLogWindowMaxHeight});
-        }
-        else if (action == 'eval') {
-            // eval the code
-            value = this.GetObj('LEIEvalInput').value;
+    //     if (typeof(title)=='undefined') {
+    //         title = "Eval Tool\
+    //                 <a id='LEIEvallpMTagConfig' href=javascript:;>lpMTagConfig</a>\
+    //                 <a id='LEIEvallpMTag' href=javascript:;>lpMTag</a>\
+    //                 <a id='LEIEvallpConnLib' href=javascript:;>lpConnLib</a>";
+    //     }
+    //     var value;
+    //     if (action == 'display') {
+    //         this.showMsgWindow(false, title, html.replace(/{VALUE}/g,''),{width: 400, height: this.maxLogWindowMaxHeight});
+    //     }
+    //     else if (action == 'eval') {
+    //         // eval the code
+    //         value = this.GetObj('LEIEvalInput').value;
 
-            try {
-                eval(value);
-            }
-            catch (e) {
-                html += 'Error detected in JS:'+e;
-                this.showMsgWindow(false, title, html.replace(/{VALUE}/g,''),{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
-            }
-        }
-        else if (action == 'logContent') {
-            // logContent the code
-            value = '';
-            if (typeof(objStr)!='undefined' && objStr!='') {
-                value = objStr;
-            }
-            else  {
-                value = this.GetObj('LEIEvalInput').value;
-            }
+    //         try {
+    //             eval(value);
+    //         }
+    //         catch (e) {
+    //             html += 'Error detected in JS:'+e;
+    //             this.showMsgWindow(false, title, html.replace(/{VALUE}/g,''),{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
+    //         }
+    //     }
+    //     else if (action == 'logContent') {
+    //         // logContent the code
+    //         value = '';
+    //         if (typeof(objStr)!='undefined' && objStr!='') {
+    //             value = objStr;
+    //         }
+    //         else  {
+    //             value = this.GetObj('LEIEvalInput').value;
+    //         }
 
-            var objRef = null;
-            try {
-                objRef = eval(value);
-            }
-            catch (e) {
-                html += 'logContent - Error detected in JS:'+e;
-                if (displayHTML) {
-                    html = html.replace(/{VALUE}/g,'');
-                }
-                else {
-                    html = 'logContent - Error detected in JS:'+e;
-                }
-                this.showMsgWindow(false, title, html,{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
-                return false;
-            }
+    //         var objRef = null;
+    //         try {
+    //             objRef = eval(value);
+    //         }
+    //         catch (e) {
+    //             html += 'logContent - Error detected in JS:'+e;
+    //             if (displayHTML) {
+    //                 html = html.replace(/{VALUE}/g,'');
+    //             }
+    //             else {
+    //                 html = 'logContent - Error detected in JS:'+e;
+    //             }
+    //             this.showMsgWindow(false, title, html,{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
+    //             return false;
+    //         }
 
-            var output = '';
+    //         var output = '';
 
-            if (objRef == null) {
-                output = 'The JS provided did not evaluate to an object or parameter';
-            }
-            else if (typeof(objRef)=='object'){
-                output = this.objectToString(objRef,undefined, true,'LEIGeneralInfo' , true);
-            }
-            else {
-                output = objRef;
-            }
-            html += output;
-            this.showMsgWindow(false, title, (displayHTML?html.replace(/{VALUE}/g,''):output),{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
-        }
-        else {
-            this.showMsgWindow(false, title, 'Invalid action type:'+action,{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
-        }
-        var that = this;
-        var elem = this.GetObj('LEIEvalRun');
-        if (elem!=null) {
-            elem.onclick = function () {that.evalTool('eval','',true);};
-        }
+    //         if (objRef == null) {
+    //             output = 'The JS provided did not evaluate to an object or parameter';
+    //         }
+    //         else if (typeof(objRef)=='object'){
+    //             output = this.objectToString(objRef,undefined, true,'LEIGeneralInfo' , true);
+    //         }
+    //         else {
+    //             output = objRef;
+    //         }
+    //         html += output;
+    //         this.showMsgWindow(false, title, (displayHTML?html.replace(/{VALUE}/g,''):output),{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
+    //     }
+    //     else {
+    //         this.showMsgWindow(false, title, 'Invalid action type:'+action,{width: this.maxLogWindowMaxWidth, height: this.maxLogWindowMaxHeight});
+    //     }
+    //     var that = this;
+    //     var elem = this.GetObj('LEIEvalRun');
+    //     if (elem!=null) {
+    //         elem.onclick = function () {that.evalTool('eval','',true);};
+    //     }
 
-        elem = this.GetObj('LEIEvalContent');
-        if (elem!=null) {
-            elem.onclick = function () {that.evalTool('logContent','',true);};
-        }
+    //     elem = this.GetObj('LEIEvalContent');
+    //     if (elem!=null) {
+    //         elem.onclick = function () {that.evalTool('logContent','',true);};
+    //     }
 
-        elem = this.GetObj('LEIEvallpMTagConfig');
-        if (elem!=null) {
-            elem.onclick = function () {that.evalTool('logContent','lpMTagConfig',true);};
-        }
+    //     elem = this.GetObj('LEIEvallpMTagConfig');
+    //     if (elem!=null) {
+    //         elem.onclick = function () {that.evalTool('logContent','lpMTagConfig',true);};
+    //     }
 
-        elem = this.GetObj('LEIEvallpMTag');
-        if (elem!=null) {
-            elem.onclick = function () {that.evalTool('logContent','lpMTag',true);};
-        }
+    //     elem = this.GetObj('LEIEvallpMTag');
+    //     if (elem!=null) {
+    //         elem.onclick = function () {that.evalTool('logContent','lpMTag',true);};
+    //     }
 
-        elem = this.GetObj('LEIEvallpConnLib');
-        if (elem!=null) {
-            elem.onclick = function () {that.evalTool('logContent','lpConnLib',true);};
-        }
-        return false;
-    };
+    //     elem = this.GetObj('LEIEvallpConnLib');
+    //     if (elem!=null) {
+    //         elem.onclick = function () {that.evalTool('logContent','lpConnLib',true);};
+    //     }
+    //     return false;
+    // };
 
-    this.adminAreaLogin = function (doNotOpenMenu) {
-        // if (doNotOpenMenu) {
+    // this.adminAreaLogin = function (doNotOpenMenu) {
+    //     // if (doNotOpenMenu) {
 
-        // }
-        // else {
-        //     this.toggleTools();
-        // }
+    //     // }
+    //     // else {
+    //     //     this.toggleTools();
+    //     // }
 
-        // var server = lpMTagConfig.lpServer;
-        // if (server == 'chat.bankofamerica.com') {
-        //     server = 'sec1.liveperson.net';
-        // }
+    //     // var server = lpMTagConfig.lpServer;
+    //     // if (server == 'chat.bankofamerica.com') {
+    //     //     server = 'sec1.liveperson.net';
+    //     // }
 
-        // var url = 'https://'+ server + '/hc/web/public/pub/ma/lp/login.jsp?goto=home.jsp&site='+lpMTagConfig.lpNumber+'&useid=1';
-        // if (lpMTagConfig.lpServer == this.specialServer) {
-        //     url += '&user=efim&pass=1';
-        // }
-        // window.open(url);
-    };
+    //     // var url = 'https://'+ server + '/hc/web/public/pub/ma/lp/login.jsp?goto=home.jsp&site='+lpMTagConfig.lpNumber+'&useid=1';
+    //     // if (lpMTagConfig.lpServer == this.specialServer) {
+    //     //     url += '&user=efim&pass=1';
+    //     // }
+    //     // window.open(url);
+    // };
 
-    this.stopStartEMT = function () {
-        //console.log('stopStartEMT');
-        this.toggleTools();
-        if (typeof(lpMTag)!='undefined') {
-            if (lpMTag.stopMTag) {// it is stopped already so start it
-                lpMTag.lpLoopTimer = setTimeout('lpMTag.lpMTagMain()', 100);
-                lpMTag.stopMTag = false;
-            }
-            else { // stop it
-                if (lpMTag.lpLoopTimer) {
-                    clearTimeout(lpMTag.lpLoopTimer);
-                }
-                lpMTag.stopMTag = true;
-            }
-        }
-        return false;
-    };
+    // this.stopStartEMT = function () {
+    //     //console.log('stopStartEMT');
+    //     this.toggleTools();
+    //     if (typeof(lpMTag)!='undefined') {
+    //         if (lpMTag.stopMTag) {// it is stopped already so start it
+    //             lpMTag.lpLoopTimer = setTimeout('lpMTag.lpMTagMain()', 100);
+    //             lpMTag.stopMTag = false;
+    //         }
+    //         else { // stop it
+    //             if (lpMTag.lpLoopTimer) {
+    //                 clearTimeout(lpMTag.lpLoopTimer);
+    //             }
+    //             lpMTag.stopMTag = true;
+    //         }
+    //     }
+    //     return false;
+    // };
 
-    this.clearCompactSnippetMode = function () {
-        //console.log('clearCompactSnippetMode');
-        this.toggleTools();
+    // this.clearCompactSnippetMode = function () {
+    //     //console.log('clearCompactSnippetMode');
+    //     this.toggleTools();
 
-        if (this.GetCookie(this.debugCookieName) == this.debugCookieValue) {// it already exists so delete it
-            this.DeleteCookie(this.debugCookieName,'/');
-        }
-        else { // set it
-            this.SetCookie(this.debugCookieName,this.debugCookieValue, null, '/');
-        }
+    //     if (this.GetCookie(this.debugCookieName) == this.debugCookieValue) {// it already exists so delete it
+    //         this.DeleteCookie(this.debugCookieName,'/');
+    //     }
+    //     else { // set it
+    //         this.SetCookie(this.debugCookieName,this.debugCookieValue, null, '/');
+    //     }
 
-        return false;
-    };
+    //     return false;
+    // };
 
-    this.logOut = function (onlyLogout) {
-        //console.log('logOut');
-        if (!onlyLogout) {
-            this.toggleTools();
-        }
+    // this.logOut = function (onlyLogout) {
+    //     //console.log('logOut');
+    //     if (!onlyLogout) {
+    //         this.toggleTools();
+    //     }
 
-        var params = new hcArrayStorage();
-        params.add('cmd','visitorLogout');
-        params.add('site',lpMTagConfig.lpNumber);
+    //     var params = new hcArrayStorage();
+    //     params.add('cmd','visitorLogout');
+    //     params.add('site',lpMTagConfig.lpNumber);
 
-        var url = lpMTagConfig.lpProtocol + '://' + lpMTagConfig.lpServer + '/hc/' + lpMTagConfig.lpNumber +'/';
-        if (typeof(lpMTag.mtagAddToQueue)!='undefined') {
-            lpMTag.mtagAddToQueue(url,params,null,false,0,true,false,1);
-        }
-        else {
-            lpConnLib.addToQueue(url,params,null,false,0,true,false,1);
-        }
-        return false;
-    };
+    //     var url = lpMTagConfig.lpProtocol + '://' + lpMTagConfig.lpServer + '/hc/' + lpMTagConfig.lpNumber +'/';
+    //     if (typeof(lpMTag.mtagAddToQueue)!='undefined') {
+    //         lpMTag.mtagAddToQueue(url,params,null,false,0,true,false,1);
+    //     }
+    //     else {
+    //         lpConnLib.addToQueue(url,params,null,false,0,true,false,1);
+    //     }
+    //     return false;
+    // };
 
-	this.markVisitor = function (onlyMarkVisitor) {
-        //console.log('markVisitor');
-        if (!onlyMarkVisitor) {
-            this.toggleTools();
-        }
+	// this.markVisitor = function (onlyMarkVisitor) {
+ //        //console.log('markVisitor');
+ //        if (!onlyMarkVisitor) {
+ //            this.toggleTools();
+ //        }
 
-        var params = new hcArrayStorage();
-        params.add('cmd','markVisitor');
-        params.add('site',lpMTagConfig.lpNumber);
+ //        var params = new hcArrayStorage();
+ //        params.add('cmd','markVisitor');
+ //        params.add('site',lpMTagConfig.lpNumber);
 
-        var url = lpMTagConfig.lpProtocol + '://' + lpMTagConfig.lpServer + '/hc/' + lpMTagConfig.lpNumber +'/';
-        if (typeof(lpMTag.mtagAddToQueue)!='undefined') {
-            lpMTag.mtagAddToQueue(url,params,null,false,0,true,false,1);
-        }
-        else {
-            lpConnLib.addToQueue(url,params,null,false,0,true,false,1);
-        }
-        return false;
-    };
+ //        var url = lpMTagConfig.lpProtocol + '://' + lpMTagConfig.lpServer + '/hc/' + lpMTagConfig.lpNumber +'/';
+ //        if (typeof(lpMTag.mtagAddToQueue)!='undefined') {
+ //            lpMTag.mtagAddToQueue(url,params,null,false,0,true,false,1);
+ //        }
+ //        else {
+ //            lpConnLib.addToQueue(url,params,null,false,0,true,false,1);
+ //        }
+ //        return false;
+ //    };
 
-    this.pageInfo = function () {
-        //console.log('pageInfo');
-        this.toggleTools();
-        if (this.logShown) {
-            this.toggleLog();
-        }
+    // this.pageInfo = function () {
+    //     //console.log('pageInfo');
+    //     this.toggleTools();
+    //     if (this.logShown) {
+    //         this.toggleLog();
+    //     }
 
-        var html = "<table class='LEIGeneralInfo'>";
-        html += '<tr>';
-            html += '<th>Title</th>';
-            html += '<td>'+ document.title + '</td>';
-        html += '</tr>';
-        html += '<tr>';
-            html += '<th>URL</th>';
-            html += '<td>'+ document.location + '</td>';
-        html += '</tr>';
-        html += '<tr>';
-            html += '<th>Referrer</th>';
-            html += '<td>'+ document.referrer + '</td>';
-        html += '</tr>';
-        html += '<tr>';
+    //     var html = "<table class='LEIGeneralInfo'>";
+    //     html += '<tr>';
+    //         html += '<th>Title</th>';
+    //         html += '<td>'+ document.title + '</td>';
+    //     html += '</tr>';
+    //     html += '<tr>';
+    //         html += '<th>URL</th>';
+    //         html += '<td>'+ document.location + '</td>';
+    //     html += '</tr>';
+    //     html += '<tr>';
+    //         html += '<th>Referrer</th>';
+    //         html += '<td>'+ document.referrer + '</td>';
+    //     html += '</tr>';
+    //     html += '<tr>';
 
-        var cookies = null;
-        if (typeof(lpMTagConfig.GetPageCookies) == 'function') {
-            cookies = lpMTagConfig.GetPageCookies();
-        }
-        else {
-            cookies = document.cookie;
-        }
-            html += '<th>Cookie Length</th>';
-            html += '<td>'+ ((typeof(cookies)=='undefined' || cookies==null)? 0 : cookies.length) + '</td>';
-        html += '</tr>';
-        html += '<tr>';
-            html += '<th>Cookies</th>';
-            html += '<td>'+ ((typeof(cookies)=='undefined' || cookies==null)? '' : cookies) + '</td>';
-        html += '</tr>';
-        html += '</table>';
+    //     var cookies = null;
+    //     if (typeof(lpMTagConfig.GetPageCookies) == 'function') {
+    //         cookies = lpMTagConfig.GetPageCookies();
+    //     }
+    //     else {
+    //         cookies = document.cookie;
+    //     }
+    //         html += '<th>Cookie Length</th>';
+    //         html += '<td>'+ ((typeof(cookies)=='undefined' || cookies==null)? 0 : cookies.length) + '</td>';
+    //     html += '</tr>';
+    //     html += '<tr>';
+    //         html += '<th>Cookies</th>';
+    //         html += '<td>'+ ((typeof(cookies)=='undefined' || cookies==null)? '' : cookies) + '</td>';
+    //     html += '</tr>';
+    //     html += '</table>';
 
-        this.showMsgWindow(false, 'Page Info', html,{width: 400, height: this.maxLogWindowMaxHeight});
-        return false;
-    };
+    //     this.showMsgWindow(false, 'Page Info', html,{width: 400, height: this.maxLogWindowMaxHeight});
+    //     return false;
+    // };
 
-    this.showEMTinfo = function () {
-        //console.log('showEMTinfo');
-        this.evalTool('logContent', 'lpMTagConfig', false, 'EMT Configuration');
-        return false;
-    };
+    // this.showEMTinfo = function () {
+    //     //console.log('showEMTinfo');
+    //     this.evalTool('logContent', 'lpMTagConfig', false, 'EMT Configuration');
+    //     return false;
+    // };
 
     this.toggleViewMode = function (id) {
         //console.log('toggleViewMode'+id);
