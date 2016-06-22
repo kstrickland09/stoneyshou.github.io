@@ -1174,7 +1174,7 @@ function LEI() {
 	                html += '<tr>\
 	                			<td>'+ ++index +'</td>';
 	                html += '	<td>'+ name +'</td>';
-	                html += '   <td>'+ JSON.stringify(this.store[name])+'</td>\
+	                html += '   <td width="400px">'+ JSON.stringify(this.store[name])+'</td>\
 	                		 </tr>';
 	            }
 	        }
