@@ -763,7 +763,7 @@ function LEI() {
                                 </tr>\
                                 <tr id='LEIMainLogWindow'>\
                                     <td>\
-                                        <table id='LEIMainLogWindowTable' width='100%' cellspacing='0' cellpadding='0' border='0'>\
+                                        <table id='LEIMainLogWindowTable' width='600px' cellspacing='0' cellpadding='0' border='0'>\
                                             <tbody>\
                                                 <tr id='LEIMessageWindowHeader'>\
                                                     <td id='LEIMessageWindowTitle'></td>\
