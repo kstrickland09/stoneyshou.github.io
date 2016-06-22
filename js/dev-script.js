@@ -858,16 +858,16 @@ function LEI() {
         // }
 
         // else {
-        //     var styles = "@import url('"+this.cssUrl+"');";
-        //     var newSS=document.createElement('link');
-        //     newSS.rel='stylesheet';
-        //     newSS.href='data:text/css,'+escape(styles);
-        //     document.getElementsByTagName("head")[0].appendChild(newSS);
+        //var styles = "@import url('"+this.cssUrl+"');";
+        var newSS=document.createElement('link');
+        newSS.rel='stylesheet';
+        newSS.href= 'https://stoneyshou.github.io/css/mystyles.css';//'data:text/css,'+escape(styles);
+        document.getElementsByTagName("head")[0].appendChild(newSS);
         // }
-        var styles = document.createElement('style');
-        styles.type = 'text/css';
-        styles.appendChild(document.createTextNode(this.css));
-        document.getElementsByTagName('head')[0].appendChild(styles);
+        // var styles = document.createElement('style');
+        // styles.type = 'text/css';
+        // styles.appendChild(document.createTextNode(this.css));
+        // document.getElementsByTagName('head')[0].appendChild(styles);
 
     };
 
