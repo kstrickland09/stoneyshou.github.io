@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>LiveEngage Bookmarklets</title>
-		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
+		<title>LE2</title>
+		<link rel="shortcut icon" href="img/icon.png" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</head>
 	<body>
-	<a href="javascript:(function(){ var newScript = document.createElement('script'); newScript.type ='text/javascript'; newScript.src = 'https://stoneyshou.github.io/js/myscript.js';document.getElementsByTagName('body')[0].appendChild(newScript);})( );">
-		<img src="img/icon.png" alt="LE Inspect Tool">
-	</a>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-brand"">
+					Tools and stuff
+				</div>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+					<a href="javascript:(function(){ var newScript = document.createElement('script'); newScript.type ='text/javascript'; newScript.src = 'https://stoneyshou.github.io/js/myscript.js';document.getElementsByTagName('body')[0].appendChild(newScript);})( );">
+						<img src="img/lei.png" alt="LiveEngage Inspect Tool"  class="img-thumbnail"/>
+					</a>
+				</div>
+				<div class="col-md-10">
+					<img src="img/screenshot.png"/>
+					<h3>Installation</h3>
+					<ul>
+						<li>Drag the image on the left and drop it to your bookmarks bar.</li>
+						<li>Click the bookmark to open the tool when you browsing a page tagged with LiveEngage tag (or not :) )</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
