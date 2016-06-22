@@ -1163,7 +1163,7 @@ function LEI() {
         			<tr>\
         				<td class="LEILable" width="10%">No.</td>\
         				<td class="LEILable" width="30%">Engagement Attributes</td>\
-        				<td class="LEILable"># Atts</td>\
+        				<td class="LEILable">Data</td>\
         			</tr>';
 
         if(this.store)
@@ -1174,7 +1174,7 @@ function LEI() {
 	                html += '<tr>\
 	                			<td>'+ ++index +'</td>';
 	                html += '	<td>'+ name +'</td>';
-	                html += '   <td>'+ this.store[name].length+'</td>\
+	                html += '   <td>'+ JASON.stringify(this.store[name])+'</td>\
 	                		 </tr>';
 	            }
 	        }
