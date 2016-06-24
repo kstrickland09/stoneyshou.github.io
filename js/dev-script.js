@@ -135,7 +135,7 @@ function LEI() {
     };
 
     // Open Engagement studio in new window
-    this.openEng = function (engId){
+    this.openEng = function (campId,engId){
     	if(typeof(lpTag) != 'undefined')
     	{
     		var engUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId + this.engPreUrl + engId;
@@ -550,7 +550,7 @@ function LEI() {
 	                html += '<tr>\
 	                			<td>'+ (i+1) +'</td>';
 	                html += '	<td class="LEIClickable" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')">'+ engArr[i].campaign +'</td>';
-	                html += '   <td class="LEIClickable" onclick="lpMTagDebug.openEng('+engArr[i].engId+')">'+ engArr[i].engId+'</td>\
+	                html += '   <td class="LEIClickable" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')">'+ engArr[i].engId+'</td>\
 	                		 </tr>';
 	            }
 	        }
