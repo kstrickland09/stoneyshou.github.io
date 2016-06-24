@@ -138,7 +138,7 @@ function LEI() {
     this.openEng = function (campId,engId){
     	if(typeof(lpTag) != 'undefined')
     	{
-    		var engUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId + this.engPreUrl + engId;
+    		var engUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId + this.engPreUrl + engId +"/studio";
     		window.open(engUrl);
     	}
     };
