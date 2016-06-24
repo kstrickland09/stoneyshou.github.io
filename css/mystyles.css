@@ -192,7 +192,9 @@
 .emtDebugInfo {
 	cursor: pointer;
 }
-
+.LEIClickable{
+	cursor: pointer;
+}
 /* The main Log Window */
 #LEIMainLogWindow {
 	display: none;
