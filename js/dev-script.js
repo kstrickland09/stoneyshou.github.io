@@ -139,7 +139,7 @@ function LEI() {
     	if(typeof(lpTag) != 'undefined')
     	{
     		var engUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId + this.engPreUrl + engId;
-    		window.open(campUrl);
+    		window.open(engUrl);
     	}
     };
 
@@ -2558,9 +2558,9 @@ function LEI() {
         var that = this;
 
         // make sure that the zIndex is the highest on page
-        if ((typeof(lpMTagConfig)=='undefined' || typeof(lpMTagConfig.emtDebugZindex)=='undefined')) {
-            this.zindex = this.getMaxZindex()+1;
-        }
+        // if ((typeof(lpMTagConfig)=='undefined' || typeof(lpMTagConfig.emtDebugZindex)=='undefined')) {
+        //     this.zindex = this.getMaxZindex()+1;
+        // }
 
         this.getUdes();
         this.browser = this.BrowserSniff();
