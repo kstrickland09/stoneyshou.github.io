@@ -194,6 +194,7 @@
 }
 .LEIClickable{
 	cursor: pointer;
+	background-color: #DCDCDC;
 }
 /* The main Log Window */
 #LEIMainLogWindow {
