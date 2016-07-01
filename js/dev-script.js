@@ -555,7 +555,7 @@ function LEI() {
 	            if (typeof(engArr[i]) == 'object') {
 	                html += '<tr>\
 	                			<td>'+ (i+1) +'</td>';
-	                html += '	<td id="campImp'+i+'" class="LEIClickable" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" onmouseover="lpMtagDebug.highlight('+this.GetObj('campImp'+i)+')" onmouseout="lpMtagDebug.rmHighlight('+this.GetObj('campImp'+i)+')">'+ engArr[i].campaign +'</td>';
+	                html += '	<td id="campImp'+i+'" class="LEIClickable" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" onmouseover="lpMTagDebug.highlight(campImp'+i+')" onmouseout="lpMTagDebug.rmHighlight(campImp'+i+')">'+ engArr[i].campaign +'</td>';
 	                html += '   <td id="engImp'+i+'" class="LEIClickable" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')">'+ engArr[i].engId+'</td>\
 	                		 </tr>';
 	            }
