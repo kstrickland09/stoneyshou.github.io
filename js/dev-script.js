@@ -555,8 +555,12 @@ function LEI() {
 	            if (typeof(engArr[i]) == 'object') {
 	                html += '<tr>\
 	                			<td>'+ (i+1) +'</td>';
-	                html += '	<td id="campImp'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" onmouseover="lpMTagDebug.highlight(campImp'+i+')" onmouseout="lpMTagDebug.rmHighlight(campImp'+i+')">'+ engArr[i].campaign +'</td>';
-	                html += '   <td id="engImp'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')">'+ engArr[i].engId+'</td>\
+	                html += '	<td id="campImp'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" \
+	                								onmouseover="lpMTagDebug.highlight(campImp'+i+')" \
+	                								onmouseout="lpMTagDebug.rmHighlight(campImp'+i+')">'+ engArr[i].campaign +'</td>';
+	                html += '   <td id="engImp'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')" \
+	                								 onmouseover="lpMTagDebug.highlight(engImp'+i+')" \
+	                								 onmouseout="lpMTagDebug.rmHighlight(engImp'+i+')">'+ engArr[i].engId+'</td>\
 	                		 </tr>';
 	            }
 	        }
@@ -595,8 +599,12 @@ function LEI() {
 	            if (typeof(engArr[i]) == 'object') {
 	                html += '<tr>\
 	                			<td>'+ (i+1) +'</td>';
-	                html += '	<td>'+ engArr[i].campaign +'</td>';
-	                html += '   <td>'+ engArr[i].engId+'</td>\
+	                html += '	<td id="campcls'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" \
+	                								onmouseover="lpMTagDebug.highlight(campcls'+i+')" \
+	                								onmouseout="lpMTagDebug.rmHighlight(campcls'+i+')">'+ engArr[i].campaign +'</td>';
+	                html += '   <td id="engcls'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')" \
+	                								 onmouseover="lpMTagDebug.highlight(engcls'+i+')" \
+	                								 onmouseout="lpMTagDebug.rmHighlight(engcls'+i+')">'+ engArr[i].engId+'</td>\
 	                		 </tr>';
 	            }
 	        }
