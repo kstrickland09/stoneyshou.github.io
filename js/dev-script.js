@@ -1,23 +1,15 @@
 function LEI() {
-	this.ver = '0.1';
-    // this.specialServer = 'efimd';
+	this.ver = '0.2';
 
-    // //this.baseURL = 'http://lpdevnew/training/LEI/';
-    // if (typeof(lpMTagConfig)!='undefined' && lpMTagConfig.lpServer == this.specialServer) {
-    //     this.baseURL = 'http://'+ this.specialServer +'/emtdebug/';
-    // }
-    // else {
-    //     this.baseURL = 'http://lpdevnew/training/emtdebuglib/';
-    // }
-    
-    // -- Change to use internal CSS
-    // this.cssUrl = this.baseURL + 'LEI.css';
+	// Console URLs per domain
     this.consoleDomain = {
     	"base.liveperson.net":"https://z1-a.le.liveperson.net/a/",// Alpha
     	"server.iad.liveperson.net":"https://z1.le.liveperson.net/a/", // US
     	"server.lon.liveperson.net":"https://z2.le.liveperson.net/a/", // UK
     	"server.sy.liveperson.net":"https://z3.le.liveperson.net/a/", // SYD
     }; 
+
+    // 
     this.campPreUrl = "/#camp!campaigns/web/";
     this.engPreUrl = "/engagement/";
 
