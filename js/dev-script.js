@@ -522,7 +522,7 @@ function LEI() {
         return false;
     };
 
-    this.hightlight = function (e){
+    this.highlight = function (e){
     	e.className = "LEIClickable";
     }
     this.rmHighlight = function (e){
@@ -555,8 +555,8 @@ function LEI() {
 	            if (typeof(engArr[i]) == 'object') {
 	                html += '<tr>\
 	                			<td>'+ (i+1) +'</td>';
-	                html += '	<td id="campImp'+i+'" class="LEIClickable" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" onmouseover="lpMTagDebug.highlight(campImp'+i+')" onmouseout="lpMTagDebug.rmHighlight(campImp'+i+')">'+ engArr[i].campaign +'</td>';
-	                html += '   <td id="engImp'+i+'" class="LEIClickable" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')">'+ engArr[i].engId+'</td>\
+	                html += '	<td id="campImp'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" onmouseover="lpMTagDebug.highlight(campImp'+i+')" onmouseout="lpMTagDebug.rmHighlight(campImp'+i+')">'+ engArr[i].campaign +'</td>';
+	                html += '   <td id="engImp'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')">'+ engArr[i].engId+'</td>\
 	                		 </tr>';
 	            }
 	        }
