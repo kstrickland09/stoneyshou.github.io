@@ -589,7 +589,7 @@ function LEI() {
 	                			<td>'+ queTxt +'</td>';
 	                html += '	<td>'+ reqTxt +'</td>';
                     html += '   <td>'+ typeTxt +'</td>';
-                    html += '   <td>'+ answerTxt +'</td>\
+                    html += '   <td style="white-space:pre">'+ answerTxt +'</td>\
 	                		 </tr>';
 	            }
 	        }
