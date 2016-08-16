@@ -422,7 +422,8 @@ function LEI() {
         elem.onclick = function () {that.closeWindow();};
 
         elem = this.GetObj('LEIToggleLog');
-        elem.onclick = function () {that.toggleLog();};
+        //elem.onclick = function () {that.toggleLog();};
+        elem.onclick = function () {that.scrapeSurvey();};
 
         // elem = this.GetObj('LEIToggleTools');
         // elem.onclick = function () {that.toggleTools();};
@@ -520,7 +521,9 @@ function LEI() {
     this.rmHighlight = function (e){
     	e.className = '';
     }
-    this.dispEngInfo = function () {
+
+    // Survey Scraper
+    this.scrapeSurvey = function () {
         if (this.toolsShown) {
             this.toggleTools();
         }
@@ -535,28 +538,87 @@ function LEI() {
 
         html = '<table>\
         			<tr>\
-        				<td class="LEILable" width="10%">No.</td>\
-        				<td class="LEILable" width="20%">Campaign ID</td>\
-        				<td class="LEILable">Engagement ID</td>\
+        				<td class="LEILable" width="10%">Question</td>\
+        				<td class="LEILable" width="20%">Required?</td>\
+                        <td class="LEILable">Answer Type</td>\
+                        <td class="LEILable">Answers</td>\
         			</tr>';
 
-        if(this.store.impDisplay.length > 0)
+        if(1)
         {
-        	var engArr = this.store.impDisplay;
-	        for (var i = 0; i < engArr.length; i++) {
-	            if (typeof(engArr[i]) == 'object') {
+        	var queTable = document.getElementById("questionsTable").children[0];
+            var queTableRows = queTable.children;
+
+	        for (var i = 1; i < queTableRows.length; i++) {
+	            if (1) {
+                    // get question from column 4
+                    var queCol = queTableRows[i].children[3];
+                    var queTxt = (queCol.children[0]).innerText;
+                    // get required setting from column 7
+                    var reqCol = queTableRows[i].children[6];
+                    var img = (reqCol.children[0]).children[0];
+                    var reqTxt = "No";
+                    if (img.src.indexOf("grn") >= 0)
+                    {
+                        reqTxt = "Yes";
+                    }
+                    // get answer type from column 5
+                    var typeCol = queTableRows[i].children[4];
+                    var typeTxt = typeCol.children[0].type;
+
 	                html += '<tr>\
-	                			<td>'+ (i+1) +'</td>';
-	                html += '	<td id="campImp'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" \
-	                								onmouseover="lpMTagDebug.highlight(campImp'+i+')" \
-	                								onmouseout="lpMTagDebug.rmHighlight(campImp'+i+')">'+ engArr[i].campaign +'</td>';
-	                html += '   <td id="engImp'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')" \
-	                								 onmouseover="lpMTagDebug.highlight(engImp'+i+')" \
-	                								 onmouseout="lpMTagDebug.rmHighlight(engImp'+i+')">'+ engArr[i].engId+'</td>\
+	                			<td>'+ queTxt +'</td>';
+	                html += '	<td>'+ reqTxt +'</td>';
+	                html += '   <td>'+ typeTxt +'</td>\
 	                		 </tr>';
 	            }
 	        }
 	    }
+        html += '</table>';
+
+
+        this.showMsgWindow(false, 'Scraped Survey Info', html,{width: 500, height: 100});
+        return false;
+    };
+
+    // 
+    this.dispEngInfo = function () {
+        if (this.toolsShown) {
+            this.toggleTools();
+        }
+
+        if (this.logShown) {
+            this.toggleLog();
+        }
+
+        var that = this;
+
+        var html = '';
+
+        html = '<table>\
+                    <tr>\
+                        <td class="LEILable" width="10%">No.</td>\
+                        <td class="LEILable" width="20%">Campaign ID</td>\
+                        <td class="LEILable">Engagement ID</td>\
+                    </tr>';
+
+        if(this.store.impDisplay.length > 0)
+        {
+            var engArr = this.store.impDisplay;
+            for (var i = 0; i < engArr.length; i++) {
+                if (typeof(engArr[i]) == 'object') {
+                    html += '<tr>\
+                                <td>'+ (i+1) +'</td>';
+                    html += '   <td id="campImp'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" \
+                                                    onmouseover="lpMTagDebug.highlight(campImp'+i+')" \
+                                                    onmouseout="lpMTagDebug.rmHighlight(campImp'+i+')">'+ engArr[i].campaign +'</td>';
+                    html += '   <td id="engImp'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')" \
+                                                     onmouseover="lpMTagDebug.highlight(engImp'+i+')" \
+                                                     onmouseout="lpMTagDebug.rmHighlight(engImp'+i+')">'+ engArr[i].engId+'</td>\
+                             </tr>';
+                }
+            }
+        }
         html += '</table>';
 
 
