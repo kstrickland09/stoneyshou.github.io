@@ -574,11 +574,12 @@ function LEI() {
                             answerTxt += ansEl[si].innerText;
                             answerTxt += "\n";
                         }
+                        console.log(answerTxt);
                     }
                     else if(typeTxt==="radio" || typeTxt==="checkbox")
                     {
                         var ansRadio = typeCol.childNodes;
-                        for (var ri = 0; ri < ansRadio.length; ri+=3) {
+                        for (var ri = 2; ri < ansRadio.length; ri+=3) {
                             answerTxt += ansRadio[ri].data;
                             answerTxt += "\n";
                         }
