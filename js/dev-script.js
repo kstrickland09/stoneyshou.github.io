@@ -569,9 +569,9 @@ function LEI() {
                     var answerTxt = "";
                     if(typeTxt==="select-one")
                     {
-                        var ansEl = typeCol.children[0];
+                        var ansEl = typeCol.firstChild.nextSibling;
                         for (var si = 0; si < ansEl.length; si++) {
-                            answerTxt += ansEl[si].childNodes[0];
+                            answerTxt += ansEl[si].innerText;
                             answerTxt += "\n";
                         }
                     }
@@ -579,7 +579,7 @@ function LEI() {
                     {
                         var ansRadio = typeCol.childNodes;
                         for (var ri = 0; ri < ansRadio.length; ri+=3) {
-                            answerTxt += ansRadio[ri];
+                            answerTxt += ansRadio[ri].data;
                             answerTxt += "\n";
                         }
                     }
