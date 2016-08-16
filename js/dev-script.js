@@ -538,8 +538,8 @@ function LEI() {
 
         html = '<table>\
         			<tr>\
-        				<td class="LEILable" width="10%">Question</td>\
-        				<td class="LEILable" width="20%">Required?</td>\
+        				<td class="LEILable" width="20%">Question</td>\
+        				<td class="LEILable" width="10%">Required?</td>\
                         <td class="LEILable">Answer Type</td>\
                         <td class="LEILable">Answers</td>\
         			</tr>';
@@ -565,6 +565,24 @@ function LEI() {
                     // get answer type from column 5
                     var typeCol = queTableRows[i].children[4];
                     var typeTxt = typeCol.children[0].type;
+                    // get answers 
+                    var answerTxt = "";
+                    if(typeTxt==="select-one")
+                    {
+                        var ansEl = typeCol.children[0];
+                        for (var si = 0; si < ansEl.length; si++) {
+                            answerTxt += ansEl[si].childNodes[0];
+                            answerTxt += "\n";
+                        }
+                    }
+                    else if(typeTxt==="radio" || typeTxt==="checkbox")
+                    {
+                        var ansRadio = typeCol.childNodes;
+                        for (var ri = 0; ri < ansRadio.length; ri+=3) {
+                            answerTxt += ansRadio[ri];
+                            answerTxt += "\n";
+                        }
+                    }
 
 	                html += '<tr>\
 	                			<td>'+ queTxt +'</td>';
