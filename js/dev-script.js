@@ -595,15 +595,15 @@ function LEI() {
         var html = '';
 
         html = '<table>\
-                    <table>\
+                    <thead>\
                     <tr>\
                         <td class="LEILable" width="30%">Question</td>\
                         <td class="LEILable" width="20%">Required?</td>\
                         <td class="LEILable" width="20%">Answer Type</td>\
                         <td class="LEILable">Answers</td>\
                     </tr>\
-                    </table>\
-                    <table id="LEISurveyTbl">';
+                    </thead>\
+                    <tbody id="LEISurveyTbl">';
 
         if(1)
         {
@@ -655,7 +655,7 @@ function LEI() {
                 }
             }
         }
-        html += '</table></table>';
+        html += '</tbody></table>';
 
 
         this.showMsgWindow(false, 'Scraped Survey Info', html,{width: 500, height: 100});
