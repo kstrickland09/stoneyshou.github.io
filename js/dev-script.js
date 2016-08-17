@@ -591,8 +591,8 @@ function LEI() {
 
         var html = '';
 
-        html = '<input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\'LEILogWindow\'))">\
-                <table>\
+        html = '<input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\'LEISurveyTbl\'))">\
+                <table id="LEISurveyTbl">\
                     <thead>\
                     <tr>\
                         <td class="LEILable" width="30%">Question</td>\
@@ -601,7 +601,7 @@ function LEI() {
                         <td class="LEILable">Answers</td>\
                     </tr>\
                     </thead>\
-                    <tbody id="LEISurveyTbl">';
+                    <tbody>';
 
         if(1)
         {
