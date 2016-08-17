@@ -259,7 +259,7 @@ function LEI() {
                                                 </tr>\
                                                 <tr class='LEIUtilButtonsRow'>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
-                                                    <td><input type='button' value='Select All' id='selectAll' onclick ='lpMTagDebug.seletElContent(document.getElementById(\"LEILogWindow\"))'></td>\
+                                                    <td><input type='button' value='Select All' id='selectAll' onclick ='lpMTagDebug.seletElContent(document.getElementById(\"LEISurveyTbl\"))'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
@@ -595,12 +595,14 @@ function LEI() {
         var html = '';
 
         html = '<table>\
+                    <table>\
                     <tr>\
                         <td class="LEILable" width="30%">Question</td>\
                         <td class="LEILable" width="20%">Required?</td>\
                         <td class="LEILable" width="20%">Answer Type</td>\
                         <td class="LEILable">Answers</td>\
-                    </tr>';
+                    </tr>\
+                    </table>';
 
         if(1)
         {
@@ -643,12 +645,12 @@ function LEI() {
                         }
                     }
 
-                    html += '<tr>\
+                    html += '<table id='LEISurveyTbl'><tr>\
                                 <td>'+ queTxt +'</td>';
                     html += '   <td>'+ reqTxt +'</td>';
                     html += '   <td>'+ this.typeConvert[typeTxt] +'</td>';
                     html += '   <td style="white-space:pre">'+ answerTxt +'</td>\
-                             </tr>';
+                             </tr></table>';
                 }
             }
         }
