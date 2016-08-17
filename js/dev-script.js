@@ -258,11 +258,11 @@ function LEI() {
                                                     <td></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilButtonsRow'>\
-                                                    <td><input type='button' value='Scrape Survey' id='surveyScraper'></td>\
-                                                    <td><input type='button' id='xx'>TBD</td>\
-                                                    <td><input type='button' id='xx'>TBD</td>\
-                                                    <td><input type='button' id='xx'>TBD</td>\
-                                                    <td><input type='button' id='xx'>TBD</td>\
+                                                    <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='this.scrapeSurvey()'></td>\
+                                                    <td><input type='button' value='TBD' id='xx'></td>\
+                                                    <td><input type='button' value='TBD' id='xx'></td>\
+                                                    <td><input type='button' value='TBD' id='xx'></td>\
+                                                    <td><input type='button' value='TBD' id='xx'></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilBottomRow'>\
                                                     <td></td>\
@@ -577,7 +577,7 @@ function LEI() {
         html = '<table>\
                     <tr>\
                         <td class="LEILable" width="40%">Question</td>\
-                        <td class="LEILable" width="10%">Required?</td>\
+                        <td class="LEILable" >Required?</td>\
                         <td class="LEILable">Answer Type</td>\
                         <td class="LEILable">Answers</td>\
                     </tr>';
