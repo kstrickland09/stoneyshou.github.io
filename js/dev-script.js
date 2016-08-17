@@ -259,7 +259,7 @@ function LEI() {
                                                 </tr>\
                                                 <tr class='LEIUtilButtonsRow'>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
-                                                    <td><input type='button' value='Select All' id='selectAll' onclick ='lpMTagDebug.seletElContent(document.getElementById(\"LEISurveyTbl\"))'></td>\
+                                                    <td><input type='button' value='Select All' id='selectAll' onclick ='lpMTagDebug.seletElContent(document.getElementById(\"LEILogWindow\"))'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
