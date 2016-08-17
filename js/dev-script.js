@@ -259,7 +259,7 @@ function LEI() {
                                                 </tr>\
                                                 <tr class='LEIUtilButtonsRow'>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
-                                                    <td><input type='button' value='TBD' id='xx'></td>\
+                                                    <td><input type='button' value='Select All' id='selectAll' onclick ='lpMTagDebug.seletElContent(document.getElementById('LEILogWindow'))'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
                                                     <td><input type='button' value='TBD' id='xx'></td>\
@@ -560,6 +560,26 @@ function LEI() {
         e.className = '';
     }
 
+    // Select Element Content
+    this.seletElContent = function (el) {
+        var body = document.body, range, sel;
+        if (document.createRange && window.getSelection) {
+            range = document.createRange();
+            sel = window.getSelection();
+            sel.removeAllRanges();
+            try {
+                range.selectNodeContents(el);
+                sel.addRange(range);
+            } catch (e) {
+                range.selectNode(el);
+                sel.addRange(range);
+            }
+        } else if (body.createTextRange) {
+            range = body.createTextRange();
+            range.moveToElementText(el);
+            range.select();
+        }
+    }
     // Survey Scraper
     this.scrapeSurvey = function () {
         if (this.toolsShown) {
@@ -576,9 +596,9 @@ function LEI() {
 
         html = '<table>\
                     <tr>\
-                        <td class="LEILable" width="40%">Question</td>\
-                        <td class="LEILable" >Required?</td>\
-                        <td class="LEILable">Answer Type</td>\
+                        <td class="LEILable" width="30%">Question</td>\
+                        <td class="LEILable" width="20%">Required?</td>\
+                        <td class="LEILable" width="20%">Answer Type</td>\
                         <td class="LEILable">Answers</td>\
                     </tr>';
 
