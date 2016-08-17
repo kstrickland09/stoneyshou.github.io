@@ -1,13 +1,22 @@
 function LEI() {
-	this.ver = '0.2';
+    this.ver = '0.2';
 
-	// Console URLs per domain
+    // Console URLs per domain
     this.consoleDomain = {
-    	"base.liveperson.net":"https://z1-a.le.liveperson.net/a/",// Alpha
-    	"server.iad.liveperson.net":"https://z1.le.liveperson.net/a/", // US
-    	"server.lon.liveperson.net":"https://z2.le.liveperson.net/a/", // UK
-    	"server.sy.liveperson.net":"https://z3.le.liveperson.net/a/", // SYD
-    }; 
+        "base.liveperson.net":"https://z1-a.le.liveperson.net/a/",// Alpha
+        "server.iad.liveperson.net":"https://z1.le.liveperson.net/a/", // US
+        "server.lon.liveperson.net":"https://z2.le.liveperson.net/a/", // UK
+        "server.sy.liveperson.net":"https://z3.le.liveperson.net/a/" // SYD
+    };
+
+    // Convert string for answer type
+    this.typeConvert = {
+        "text":"Text field",
+        "select-one":"Drop-down menu",
+        "radio":"Radio button",
+        "checkbox":"Check box",
+        "textarea":"Text area",
+    };
 
     // 
     this.campPreUrl = "/#camp!campaigns/web/";
@@ -119,20 +128,20 @@ function LEI() {
 
     // Open campaign in new window
     this.openCamp = function (campId){
-    	if(typeof(lpTag) != 'undefined')
-    	{
-    		var campUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId;
-    		window.open(campUrl);
-    	}
+        if(typeof(lpTag) != 'undefined')
+        {
+            var campUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId;
+            window.open(campUrl);
+        }
     };
 
     // Open Engagement studio in new window
     this.openEng = function (campId,engId){
-    	if(typeof(lpTag) != 'undefined')
-    	{
-    		var engUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId + this.engPreUrl + engId +"/studio";
-    		window.open(engUrl);
-    	}
+        if(typeof(lpTag) != 'undefined')
+        {
+            var engUrl = this.consoleDomain[lpTag.getDomain()] + lpTag.site+ this.campPreUrl + campId + this.engPreUrl + engId +"/studio";
+            window.open(engUrl);
+        }
     };
 
     this.generateHTML = function (){
@@ -151,11 +160,11 @@ function LEI() {
                                                     <td id='LEIMainTitle'>Inspect Tool ver: "+this.ver+"</td>\
                                                     <td id='LEIMinimize'>\
                                                         <div class='LEIMiniWrapper'>\
-                                                        	<a href='javascript:;' alt='Close' title='Close'>\
+                                                            <a href='javascript:;' alt='Close' title='Close'>\
                                                             <div id='LEIImgClose' class='LEICloseBtn'></div></a>\
                                                         </div>\
                                                         <div class='LEIMiniWrapper'>\
-                                                        	<a href='javascript:;' alt='Minimize / Maximize' title='Minimize / Maximize'>\
+                                                            <a href='javascript:;' alt='Minimize / Maximize' title='Minimize / Maximize'>\
                                                             <div id='LEIImgMinimize' class='LEIMiniBtn'></div></a>\
                                                         </div>\
                                                     </td>\
@@ -169,7 +178,7 @@ function LEI() {
                                         <table id='emtDebugMainMonitorTable' width='100%' cellspacing='0' cellpadding='0' border='0'>\
                                             <tbody>\
                                                 <tr class='LEImainTableTopRow'>\
-                                                	<td></td>\
+                                                    <td></td>\
                                                     <td colspan='2' class='LEILable'>Account : </td>\
                                                     <td colspan='2' class='LEImainTableTopRowAcc LEIEMTDivider' id='LEIEMTsiteId'>"+this.noValueStr+"</td>\
                                                     <td colspan='4' id='LEIDomain' class='LEIEMTDivider'>"+this.noValueStr+"</td>\
@@ -183,7 +192,7 @@ function LEI() {
                                                 </tr>\
                                                 <tr class='LEImainTableNumberRow'><td style='height:5px'></td></tr>\
                                                 <tr class='LEImainTableNumberRow'>\
-                                                 	<td></td>\
+                                                    <td></td>\
                                                     <td id='LEIENGcnt' colspan='2'>"+this.noValueStr+"</td>\
                                                     <td id='LEIEMBcnt' colspan='2'>"+this.noValueStr+"</td>\
                                                     <td id='LEIClosedcnt' colspan='2'>"+this.noValueStr+"</td>\
@@ -193,8 +202,8 @@ function LEI() {
                                                     <td id='LEIWARNcnt'>"+this.noValueStr+"</td>\
                                                     <td class='emtDebugOK' id='LEIOKcnt'>"+this.noValueStr+"</td>\
                                                 </tr>\
-                                               	<tr class='LEImainTableLabelRow'>\
-                                               		<td></td>\
+                                                <tr class='LEImainTableLabelRow'>\
+                                                    <td></td>\
                                                     <td colspan='2'>Disp ENG.</td>\
                                                     <td colspan='2'>Emb ENG.</td>\
                                                     <td colspan='2'>Closed ENG.</td>\
@@ -233,6 +242,23 @@ function LEI() {
                                                         <div id='LEILogWindow'></div>\
                                                     </td>\
                                                 </tr\
+                                            </tbody>\
+                                        </table>\
+                                    </td>\
+                                </tr>\
+                                <tr id='LEIUtilWindow'>\
+                                    <td>\
+                                        <table id='LEIUtilTable' width='100%' cellspacing='0' cellpadding='0' border='0'>\
+                                            <tbody>\
+                                                <tr class='LEIUtilTopRow'>\
+                                                    <td></td>\
+                                                </tr>\
+                                                <tr class='LEIUtilButtonsRow'>\
+                                                    <td></td>\
+                                                </tr>\
+                                                <tr class='LEIUtilBottomRow'>\
+                                                    <td></td>\
+                                                </tr>\
                                             </tbody>\
                                         </table>\
                                     </td>\
@@ -319,7 +345,7 @@ function LEI() {
 
     };
 
-	this.createGenericDiv = function (id, zindex, left, top, height, width, innerHtml, cursor, onclickFunction, isVisible, extraStyle) {
+    this.createGenericDiv = function (id, zindex, left, top, height, width, innerHtml, cursor, onclickFunction, isVisible, extraStyle) {
         if (! document.getElementsByTagName) {
             return;
         }
@@ -440,7 +466,7 @@ function LEI() {
   //       elem = this.GetObj('LEILogOut');
   //       elem.onclick = function () {that.logOut();};
 
-		// elem = this.GetObj('LEIMarkVisitor');
+        // elem = this.GetObj('LEIMarkVisitor');
   //       elem.onclick = function () {that.markVisitor();};
 
   //       elem = this.GetObj('LEIStopStartEMT');
@@ -516,10 +542,10 @@ function LEI() {
     };
 
     this.highlight = function (e){
-    	e.className = "LEIClickable";
+        e.className = "LEIClickable";
     }
     this.rmHighlight = function (e){
-    	e.className = '';
+        e.className = '';
     }
 
     // Survey Scraper
@@ -537,20 +563,20 @@ function LEI() {
         var html = '';
 
         html = '<table>\
-        			<tr>\
-        				<td class="LEILable" width="20%">Question</td>\
-        				<td class="LEILable" width="10%">Required?</td>\
+                    <tr>\
+                        <td class="LEILable" width="40%">Question</td>\
+                        <td class="LEILable" width="10%">Required?</td>\
                         <td class="LEILable">Answer Type</td>\
                         <td class="LEILable">Answers</td>\
-        			</tr>';
+                    </tr>';
 
         if(1)
         {
-        	var queTable = document.getElementById("questionsTable").children[0];
+            var queTable = document.getElementById("questionsTable").children[0];
             var queTableRows = queTable.children;
 
-	        for (var i = 1; i < queTableRows.length; i++) {
-	            if (1) {
+            for (var i = 1; i < queTableRows.length; i++) {
+                if (1) {
                     // get question from column 4
                     var queCol = queTableRows[i].children[3];
                     var queTxt = (queCol.children[0]).innerText;
@@ -585,15 +611,15 @@ function LEI() {
                         }
                     }
 
-	                html += '<tr>\
-	                			<td>'+ queTxt +'</td>';
-	                html += '	<td>'+ reqTxt +'</td>';
-                    html += '   <td>'+ typeTxt +'</td>';
+                    html += '<tr>\
+                                <td>'+ queTxt +'</td>';
+                    html += '   <td>'+ reqTxt +'</td>';
+                    html += '   <td>'+ this.typeConvert[typeTxt] +'</td>';
                     html += '   <td style="white-space:pre">'+ answerTxt +'</td>\
-	                		 </tr>';
-	            }
-	        }
-	    }
+                             </tr>';
+                }
+            }
+        }
         html += '</table>';
 
 
@@ -660,29 +686,29 @@ function LEI() {
         var html = '';
 
         html = '<table>\
-        			<tr>\
-        				<td class="LEILable" width="10%">No.</td>\
-        				<td class="LEILable" width="20%">Campaign ID</td>\
-        				<td class="LEILable">Engagement ID</td>\
-        			</tr>';
+                    <tr>\
+                        <td class="LEILable" width="10%">No.</td>\
+                        <td class="LEILable" width="20%">Campaign ID</td>\
+                        <td class="LEILable">Engagement ID</td>\
+                    </tr>';
 
         if(this.store.impClose.length > 0)
         {
-        	var engArr = this.store.impClose;
-	        for (var i = 0; i < engArr.length; i++) {
-	            if (typeof(engArr[i]) == 'object') {
-	                html += '<tr>\
-	                			<td>'+ (i+1) +'</td>';
-	                html += '	<td id="campcls'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" \
-	                								onmouseover="lpMTagDebug.highlight(campcls'+i+')" \
-	                								onmouseout="lpMTagDebug.rmHighlight(campcls'+i+')">'+ engArr[i].campaign +'</td>';
-	                html += '   <td id="engcls'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')" \
-	                								 onmouseover="lpMTagDebug.highlight(engcls'+i+')" \
-	                								 onmouseout="lpMTagDebug.rmHighlight(engcls'+i+')">'+ engArr[i].engId+'</td>\
-	                		 </tr>';
-	            }
-	        }
-	    }
+            var engArr = this.store.impClose;
+            for (var i = 0; i < engArr.length; i++) {
+                if (typeof(engArr[i]) == 'object') {
+                    html += '<tr>\
+                                <td>'+ (i+1) +'</td>';
+                    html += '   <td id="campcls'+i+'" onclick="lpMTagDebug.openCamp('+engArr[i].campaign+')" \
+                                                    onmouseover="lpMTagDebug.highlight(campcls'+i+')" \
+                                                    onmouseout="lpMTagDebug.rmHighlight(campcls'+i+')">'+ engArr[i].campaign +'</td>';
+                    html += '   <td id="engcls'+i+'" onclick="lpMTagDebug.openEng('+engArr[i].campaign+ ',' +engArr[i].engId+')" \
+                                                     onmouseover="lpMTagDebug.highlight(engcls'+i+')" \
+                                                     onmouseout="lpMTagDebug.rmHighlight(engcls'+i+')">'+ engArr[i].engId+'</td>\
+                             </tr>';
+                }
+            }
+        }
         html += '</table>';
 
 
@@ -704,25 +730,25 @@ function LEI() {
         var html = '';
 
         html = '<table>\
-        			<tr>\
-        				<td class="LEILable" width="10%">No.</td>\
-        				<td class="LEILable" width="30%">Engagement Attributes</td>\
-        				<td class="LEILable">Data</td>\
-        			</tr>';
+                    <tr>\
+                        <td class="LEILable" width="10%">No.</td>\
+                        <td class="LEILable" width="30%">Engagement Attributes</td>\
+                        <td class="LEILable">Data</td>\
+                    </tr>';
 
         if(this.store)
         {
-        	var index =0;
-	        for (name in this.store) {
-	            if ((name != 'impDisplay')&&(name != 'impClose')&&(name != 'pagediv')&&(name!='tabActive')) {
-	                html += '<tr>\
-	                			<td>'+ ++index +'</td>';
-	                html += '	<td>'+ name +'</td>';
-	                html += '   <td width="400px">'+ JSON.stringify(this.store[name])+'</td>\
-	                		 </tr>';
-	            }
-	        }
-	    }
+            var index =0;
+            for (name in this.store) {
+                if ((name != 'impDisplay')&&(name != 'impClose')&&(name != 'pagediv')&&(name!='tabActive')) {
+                    html += '<tr>\
+                                <td>'+ ++index +'</td>';
+                    html += '   <td>'+ name +'</td>';
+                    html += '   <td width="400px">'+ JSON.stringify(this.store[name])+'</td>\
+                             </tr>';
+                }
+            }
+        }
         html += '</table>';
 
 
@@ -744,24 +770,24 @@ function LEI() {
         var html = '';
 
         html = '<table>\
-        			<tr>\
-        				<td class="LEILable" width="10%">No.</td>\
-        				<td class="LEILable" width="20%">Div ID</td>\
-        				<td class="LEILable"></td>\
-        			</tr>';
+                    <tr>\
+                        <td class="LEILable" width="10%">No.</td>\
+                        <td class="LEILable" width="20%">Div ID</td>\
+                        <td class="LEILable"></td>\
+                    </tr>';
 
         if(this.store.pagediv.length > 0)
         {
-        	var embArr = this.store.pagediv;
-	        for (var i = 0; i < embArr.length; i++) {
-	            if (typeof(embArr[i]) == 'object') {
-	                html += '<tr>\
-	                			<td>'+ (i+1) +'</td>';
-	                html += '	<td>'+ embArr[i].divId +'</td>';
-	                html += '	<td></td></tr>';
-	            }
-	        }
-	    }
+            var embArr = this.store.pagediv;
+            for (var i = 0; i < embArr.length; i++) {
+                if (typeof(embArr[i]) == 'object') {
+                    html += '<tr>\
+                                <td>'+ (i+1) +'</td>';
+                    html += '   <td>'+ embArr[i].divId +'</td>';
+                    html += '   <td></td></tr>';
+                }
+            }
+        }
         html += '</table>';
 
 
@@ -1229,7 +1255,7 @@ function LEI() {
     //     return false;
     // };
 
-	// this.markVisitor = function (onlyMarkVisitor) {
+    // this.markVisitor = function (onlyMarkVisitor) {
  //        //console.log('markVisitor');
  //        if (!onlyMarkVisitor) {
  //            this.toggleTools();
@@ -1644,42 +1670,42 @@ function LEI() {
         // If core tag detected
         if(typeof(lpMTag) != 'undefined')
         {
-        	elem = this.GetObj('LEITagStatIcon');
-        	if(elem.className != 'LEITagStatWarn'){
-        		updated = true;
-        		elem.className = 'LEITagStatWarn';
-        		elem = this.GetObj('LEITagStatText');
-        		elem.innerHTML = 'Old monitor tag';
-        	}
+            elem = this.GetObj('LEITagStatIcon');
+            if(elem.className != 'LEITagStatWarn'){
+                updated = true;
+                elem.className = 'LEITagStatWarn';
+                elem = this.GetObj('LEITagStatText');
+                elem.innerHTML = 'Old monitor tag';
+            }
         }
 
         // Get info from lpTag
         if (typeof(lpTag)!='undefined') {
 
-        	// Update Tag status
-        	elem = this.GetObj('LEITagStatIcon');
-        	if((elem.className != 'LEITagStatOk') && (lpTag.site != undefined)){
-        		elem.className = 'LEITagStatOk';
-        		updated = true;
-        		elem = this.GetObj('LEITagStatText');
-        		elem.innerHTML = 'Tag detected.';
-        	}
+            // Update Tag status
+            elem = this.GetObj('LEITagStatIcon');
+            if((elem.className != 'LEITagStatOk') && (lpTag.site != undefined)){
+                elem.className = 'LEITagStatOk';
+                updated = true;
+                elem = this.GetObj('LEITagStatText');
+                elem.innerHTML = 'Tag detected.';
+            }
 
 
-        	// Update time on page
-	        var timenow = new Date();
-	        var difDate = new Date();
+            // Update time on page
+            var timenow = new Date();
+            var difDate = new Date();
 
-	        this.timestart = (lpTag._timing.contReady>0)?new Date(lpTag._timing.contReady) : this.timestart;
+            this.timestart = (lpTag._timing.contReady>0)?new Date(lpTag._timing.contReady) : this.timestart;
 
-	        var dif = timenow.getTime() - this.timestart.getTime();
-	        difDate.setTime(dif);
-	        var minTxt =  (difDate.getUTCMinutes()>0)? (difDate.getUTCMinutes()+'m ') : '';
-	        var hourTxt = (difDate.getUTCHours()>0)?(difDate.getUTCHours() + 'h '):'';
-	        var secTxt = difDate.getUTCSeconds() + 's';
-	        var timeText = hourTxt + minTxt + secTxt;
-	        elem = this.GetObj('LEIStatusTimeOnPage');
-	        elem.innerHTML = timeText;
+            var dif = timenow.getTime() - this.timestart.getTime();
+            difDate.setTime(dif);
+            var minTxt =  (difDate.getUTCMinutes()>0)? (difDate.getUTCMinutes()+'m ') : '';
+            var hourTxt = (difDate.getUTCHours()>0)?(difDate.getUTCHours() + 'h '):'';
+            var secTxt = difDate.getUTCSeconds() + 's';
+            var timeText = hourTxt + minTxt + secTxt;
+            elem = this.GetObj('LEIStatusTimeOnPage');
+            elem.innerHTML = timeText;
             
 
             // Get site ID
@@ -1688,22 +1714,22 @@ function LEI() {
 
             elem = this.GetObj('LEIEMTsiteId');
             if(elem.innerHTML != siteId){
-	            updated = true;
-	            elem.innerHTML = siteId;
+                updated = true;
+                elem.innerHTML = siteId;
             }
 
             // Get Engagement attributes number
             var ENGAttCnt = 0;
             for(name in this.store){
-            	if((name != 'impDisplay')&&(name != 'impClose')&&(name != 'pagediv')&&(name!='tabActive'))
-            		ENGAttCnt ++;
+                if((name != 'impDisplay')&&(name != 'impClose')&&(name != 'pagediv')&&(name!='tabActive'))
+                    ENGAttCnt ++;
             }
             if(ENGAttCnt > 0){
-	            elem = this.GetObj('LEIENGAtt');
-	            elem.innerHTML = ENGAttCnt;
-	            elem.style.cursor = 'pointer';
-	            elem.onclick = function () {that.dispEngAtt()};
-			}
+                elem = this.GetObj('LEIENGAtt');
+                elem.innerHTML = ENGAttCnt;
+                elem.style.cursor = 'pointer';
+                elem.onclick = function () {that.dispEngAtt()};
+            }
             // Get server domain 
             var domainStr = (typeof(lpTag.getDomain)==='function')?lpTag.getDomain() : this.noValueStr;
             elem = this.GetObj('LEIDomain');
@@ -1715,67 +1741,67 @@ function LEI() {
             // Get section
             if(lpTag.section != '')
             {
-            	elem = this.GetObj('LEIEMTSection');
-            	updated = true;
-            	elem.innerHTML = lpTag.section;
+                elem = this.GetObj('LEIEMTSection');
+                updated = true;
+                elem.innerHTML = lpTag.section;
             }
 
             // Get Engagement impression count
             var dispEngs = this.store.impDisplay;
             if(typeof(dispEngs) != 'undefined')
             {   
-            	var engCnt = dispEngs.length;
-	            elem = this.GetObj('LEIENGcnt');
-            	if(elem.innerHTML != engCnt)
-		        {    
-		            updated = true;
-		            elem.innerHTML = engCnt;
-		            elem.onclick = function(){that.dispEngInfo()};
+                var engCnt = dispEngs.length;
+                elem = this.GetObj('LEIENGcnt');
+                if(elem.innerHTML != engCnt)
+                {    
+                    updated = true;
+                    elem.innerHTML = engCnt;
+                    elem.onclick = function(){that.dispEngInfo()};
                     elem.className='emtDebugInfo';
-		        }
-			}
+                }
+            }
 
-			// Get Embedded Engagement count
+            // Get Embedded Engagement count
             var emds = this.store.pagediv;
             if(typeof(emds) != 'undefined')
             {   
-            	var embCnt = emds.length;
-	            elem = this.GetObj('LEIEMBcnt');
-            	if(elem.innerHTML != embCnt)
-		        {    
-		            updated = true;
-		            elem.innerHTML = embCnt;
-		            elem.onclick = function(){that.dispEMBInfo()};
+                var embCnt = emds.length;
+                elem = this.GetObj('LEIEMBcnt');
+                if(elem.innerHTML != embCnt)
+                {    
+                    updated = true;
+                    elem.innerHTML = embCnt;
+                    elem.onclick = function(){that.dispEMBInfo()};
                     elem.className='emtDebugInfo';
-		        }
-			}
+                }
+            }
 
-			// Get closed engagement count
-			var closEngs = this.store.impClose;
-			if(typeof(closEngs)!='undefined')
-			{
-            	var engCnt = closEngs.length;
-	            elem = this.GetObj('LEIClosedcnt');
-            	if(elem.innerHTML != engCnt)
-		        {    
-		            updated = true;
-		            elem.innerHTML = engCnt;
-		            elem.onclick = function(){that.closedEngInfo()};
+            // Get closed engagement count
+            var closEngs = this.store.impClose;
+            if(typeof(closEngs)!='undefined')
+            {
+                var engCnt = closEngs.length;
+                elem = this.GetObj('LEIClosedcnt');
+                if(elem.innerHTML != engCnt)
+                {    
+                    updated = true;
+                    elem.innerHTML = engCnt;
+                    elem.onclick = function(){that.closedEngInfo()};
                     elem.className='emtDebugInfo';
-		        }
-			}
+                }
+            }
 
-			// Get tag load time
-			elem = this.GetObj('LEILoadTime');
-			var startTime = lpTag._timing.start||0;
-			var readyTime = lpTag._timing.contReady||0;
+            // Get tag load time
+            elem = this.GetObj('LEILoadTime');
+            var startTime = lpTag._timing.start||0;
+            var readyTime = lpTag._timing.contReady||0;
 
-			var loadTime = (readyTime - startTime)>0?(readyTime - startTime):'N/A';
-			if((elem.innerHTML === this.noValueStr))
-			{
-				updated = true;
-				elem.innerHTML = loadTime + 'ms';
-			}
+            var loadTime = (readyTime - startTime)>0?(readyTime - startTime):'N/A';
+            if((elem.innerHTML === this.noValueStr))
+            {
+                updated = true;
+                elem.innerHTML = loadTime + 'ms';
+            }
 
             this.leChatRef = (typeof (lpTagConfig) != "undefined") && (typeof (lpTagConfig.tagPlugins) != "undefined") ? lpTagConfig.tagPlugins : null;
             this.leChatProps.ver = (typeof (lpTagConfig) != "undefined") ? ' (' + lpTagConfig._ver + ')' : '';
@@ -2006,9 +2032,9 @@ function LEI() {
     };
 
     this.closeWindow = function () {
-    	var parentNd = document.body;
-    	var childNd = document.getElementById('LEImainDiv');
-    	parentNd.removeChild(childNd);
+        var parentNd = document.body;
+        var childNd = document.getElementById('LEImainDiv');
+        parentNd.removeChild(childNd);
     };
 
     this.showTR = function (id) {
