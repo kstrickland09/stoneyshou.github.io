@@ -645,7 +645,7 @@ function LEI() {
                         }
                     }
 
-                    html += '<table id='LEISurveyTbl'><tr>\
+                    html += '<table id="LEISurveyTbl"><tr>\
                                 <td>'+ queTxt +'</td>';
                     html += '   <td>'+ reqTxt +'</td>';
                     html += '   <td>'+ this.typeConvert[typeTxt] +'</td>';
