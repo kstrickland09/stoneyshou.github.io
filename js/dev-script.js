@@ -591,11 +591,9 @@ function LEI() {
 
         var html = '';
 
-        html = '<table>\
+        html = '<input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\'LEILogWindow\'))">\
+                <table>\
                     <thead>\
-                    <tr>\
-                    <td><input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\'LEILogWindow\'))"></td>\
-                    </tr>\
                     <tr>\
                         <td class="LEILable" width="30%">Question</td>\
                         <td class="LEILable" width="20%">Required?</td>\
@@ -627,7 +625,7 @@ function LEI() {
                     var typeCol = queTableRows[i].children[4];
                     var typeTxt = typeCol.children[0].type;
                     // get answers 
-                    var answerTxt = "";
+                    var answerTxt = "\"";
                     if(typeTxt==="select-one")
                     {
                         var ansEl = typeCol.firstChild.nextSibling;
@@ -645,6 +643,7 @@ function LEI() {
                             answerTxt += "\n";
                         }
                     }
+                    answerTxt += "\"";
 
                     html += '<tr>\
                                 <td width="30%">'+ queTxt +'</td>';
