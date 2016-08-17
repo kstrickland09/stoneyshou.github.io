@@ -597,7 +597,7 @@ function LEI() {
         html = '<table>\
                     <thead>\
                     <tr>\
-                    <td><input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\"LEILogWindow\"))"></td>\
+                    <td><input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\'LEILogWindow\'))"></td>\
                     </tr>\
                     <tr>\
                         <td class="LEILable" width="30%">Question</td>\
