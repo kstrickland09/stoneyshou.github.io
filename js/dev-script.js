@@ -647,9 +647,9 @@ function LEI() {
                     }
 
                     html += '<tr>\
-                                <td>'+ queTxt +'</td>';
-                    html += '   <td>'+ reqTxt +'</td>';
-                    html += '   <td>'+ this.typeConvert[typeTxt] +'</td>';
+                                <td width="30%">'+ queTxt +'</td>';
+                    html += '   <td width="20%">'+ reqTxt +'</td>';
+                    html += '   <td width="20%">'+ this.typeConvert[typeTxt] +'</td>';
                     html += '   <td style="white-space:pre">'+ answerTxt +'</td>\
                              </tr>';
                 }
