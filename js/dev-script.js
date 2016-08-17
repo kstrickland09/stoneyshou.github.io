@@ -592,7 +592,7 @@ function LEI() {
         var html = '';
 
         html = '<input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\'LEISurveyTbl\'))">\
-                <table id="LEISurveyTbl">\
+                <table>\
                     <thead>\
                     <tr>\
                         <td class="LEILable" width="30%">Question</td>\
@@ -601,7 +601,7 @@ function LEI() {
                         <td class="LEILable">Answers</td>\
                     </tr>\
                     </thead>\
-                    <tbody>';
+                    <tbody id="LEISurveyTbl">';
 
         if(1)
         {
@@ -639,8 +639,11 @@ function LEI() {
                     {
                         var ansRadio = typeCol.childNodes;
                         for (var ri = 2; ri < ansRadio.length; ri+=3) {
+                            if(ri>2)
+                            {
+                                answerTxt += "\n";
+                            }
                             answerTxt += ansRadio[ri].data;
-                            answerTxt += "\n";
                         }
                     }
                     answerTxt += "\"";
