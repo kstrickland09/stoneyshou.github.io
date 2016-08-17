@@ -602,7 +602,8 @@ function LEI() {
                         <td class="LEILable" width="20%">Answer Type</td>\
                         <td class="LEILable">Answers</td>\
                     </tr>\
-                    </table>';
+                    </table>\
+                    <table id="LEISurveyTbl">';
 
         if(1)
         {
@@ -645,18 +646,16 @@ function LEI() {
                         }
                     }
 
-                    html += '<table id="LEISurveyTbl">\
-                                <tr>\
+                    html += '<tr>\
                                 <td>'+ queTxt +'</td>';
                     html += '   <td>'+ reqTxt +'</td>';
                     html += '   <td>'+ this.typeConvert[typeTxt] +'</td>';
                     html += '   <td style="white-space:pre">'+ answerTxt +'</td>\
-                             </tr>\
-                             </table>';
+                             </tr>';
                 }
             }
         }
-        html += '</table>';
+        html += '</table></table>';
 
 
         this.showMsgWindow(false, 'Scraped Survey Info', html,{width: 500, height: 100});
