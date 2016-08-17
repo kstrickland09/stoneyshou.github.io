@@ -258,11 +258,11 @@ function LEI() {
                                                     <td></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilButtonsRow'>\
-                                                    <td><input type="button" id="surveyScraper">Scrape Survey</td>\
-                                                    <td><input type="button" id="xx">TBD</td>\
-                                                    <td><input type="button" id="xx">TBD</td>\
-                                                    <td><input type="button" id="xx">TBD</td>\
-                                                    <td><input type="button" id="xx">TBD</td>\
+                                                    <td><input type='button' value='Scrape Survey' id='surveyScraper'></td>\
+                                                    <td><input type='button' id='xx'>TBD</td>\
+                                                    <td><input type='button' id='xx'>TBD</td>\
+                                                    <td><input type='button' id='xx'>TBD</td>\
+                                                    <td><input type='button' id='xx'>TBD</td>\
                                                 </tr>\
                                                 <tr class='LEIUtilBottomRow'>\
                                                     <td></td>\
