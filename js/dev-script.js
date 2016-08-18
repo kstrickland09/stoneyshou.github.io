@@ -258,7 +258,7 @@ function LEI() {
                                                     <td></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilButtonsRow'>\
-                                                    <td><input style='color:#fff' type='checkbox' id='incInv'>Include invisible questions</td>\
+                                                    <td><input type='checkbox' id='incInv'><span style='color:#fff'>Include invisible questions</span></td>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
                                                     <td><input type='button' value='T.B.D' id='xx'></td>\
                                                 </tr>\
