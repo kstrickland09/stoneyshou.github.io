@@ -609,7 +609,11 @@ function LEI() {
             var queTableRows = queTable.children;
 
             for (var i = 1; i < queTableRows.length; i++) {
-                if (1) {
+                // get visible status from column 6
+                var visCol = queTableRows[i].children[5];
+                var visImg = (reqCol.children[0]).children[0];
+
+                if (visImg.src.indexOf("grn") >= 0) {
                     // get question from column 4
                     var queCol = queTableRows[i].children[3];
                     var queTxt = (queCol.children[0]).innerText;
