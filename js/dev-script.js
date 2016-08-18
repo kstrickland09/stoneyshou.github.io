@@ -258,6 +258,7 @@ function LEI() {
                                                     <td></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilButtonsRow'>\
+                                                    <td><input type='checkbox' id='incInv'>Include invisible questions</td>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
                                                     <td><input type='button' value='T.B.D' id='xx'></td>\
                                                 </tr>\
@@ -613,7 +614,7 @@ function LEI() {
                 var visCol = queTableRows[i].children[5];
                 var visImg = (visCol.children[0]).children[0];
 
-                if (visImg.src.indexOf("grn") >= 0) {
+                if (this.GetObj("toggleIncInv").checked || visImg.src.indexOf("grn") >= 0) {
                     // get question from column 4
                     var queCol = queTableRows[i].children[3];
                     var queTxt = (queCol.children[0]).innerText;
