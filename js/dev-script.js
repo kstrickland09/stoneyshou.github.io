@@ -362,6 +362,7 @@ function LEI() {
     
     // get config info
     this.getConfigInfo = function (siteID, bearer){
+        alert("Start!");
         var settings = {
           "async": true,
           "crossDomain": true,
@@ -373,7 +374,7 @@ function LEI() {
             "postman-token": "3bdb6385-45a7-ece2-f2ab-2365df20ff19"
           }
         }
-
+        console.log("sent!");
         $.ajax(settings).done(function (response) {
           console.log(response);
         });
