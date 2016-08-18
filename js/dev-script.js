@@ -260,7 +260,7 @@ function LEI() {
                                                 <tr class='LEIUtilButtonsRow'>\
                                                     <td><input type='checkbox' id='incInv'><span style='color:#fff'>Include invisible questions</span></td>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
-                                                    <td><input type='button' value='T.B.D' id='xx'></td>\
+                                                    <td><input type='button' value='Get Config Info' id='lpMTagDebug.getConfigInfo()'></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilBottomRow'>\
                                                     <td></td>\
@@ -359,6 +359,25 @@ function LEI() {
         document.getElementsByTagName("head")[0].appendChild(newSt);
 
     };
+    
+    // get config info
+    this.getConfigInfo = function (siteID, bearer){
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://sy.ac.liveperson.net/api/account/85946726/configuration/le-targeting/onsite-locations/253856251?v=3.0",
+          "method": "GET",
+          "headers": {
+            "authorization": "Bearer f6ec69f2b8cf243158d74d41e44814c03e6de0dd508cf5a722dd4965c049117d",
+            "cache-control": "no-cache",
+            "postman-token": "3bdb6385-45a7-ece2-f2ab-2365df20ff19"
+          }
+        }
+
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+    }
 
     this.createGenericDiv = function (id, zindex, left, top, height, width, innerHtml, cursor, onclickFunction, isVisible, extraStyle) {
         if (! document.getElementsByTagName) {
