@@ -611,7 +611,7 @@ function LEI() {
             for (var i = 1; i < queTableRows.length; i++) {
                 // get visible status from column 6
                 var visCol = queTableRows[i].children[5];
-                var visImg = (reqCol.children[0]).children[0];
+                var visImg = (visCol.children[0]).children[0];
 
                 if (visImg.src.indexOf("grn") >= 0) {
                     // get question from column 4
