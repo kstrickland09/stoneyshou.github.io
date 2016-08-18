@@ -356,7 +356,7 @@ function LEI() {
         // Add JQuery lib
         var newSt = document.createElement('script');
         newSt.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js";
-        document.getElementsByTagName("head")[0].appendChild(newSS);
+        document.getElementsByTagName("head")[0].appendChild(newSt);
 
     };
 
