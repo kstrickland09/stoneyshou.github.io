@@ -614,7 +614,7 @@ function LEI() {
                 var visCol = queTableRows[i].children[5];
                 var visImg = (visCol.children[0]).children[0];
 
-                if (this.GetObj("toggleIncInv").checked || visImg.src.indexOf("grn") >= 0) {
+                if (this.GetObj("incInv").checked || visImg.src.indexOf("grn") >= 0) {
                     // get question from column 4
                     var queCol = queTableRows[i].children[3];
                     var queTxt = (queCol.children[0]).innerText;
