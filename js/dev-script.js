@@ -630,8 +630,12 @@ function LEI() {
                     {
                         var ansEl = typeCol.firstChild.nextSibling;
                         for (var si = 0; si < ansEl.length; si++) {
+                            if(si > 0)
+                            {
+                                answerTxt += "\n";
+                            }
+
                             answerTxt += ansEl[si].innerText;
-                            answerTxt += "\n";
                         }
                         console.log(answerTxt);
                     }
