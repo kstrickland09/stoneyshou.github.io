@@ -731,7 +731,7 @@ function LEI() {
         var confName = "Password Policy";
         var confEnabled = "No";
         var confValue = "";
-        var enabledImg = pwPolicyTbl.children[0].children[2].children[2].chilren[0];
+        var enabledImg = pwPolicyTbl.children[0].children[2].children[2].children[0];
         if (enabledImg.src.indexOf("grn") >= 0)
         {
             confEnabled = "Yes";
