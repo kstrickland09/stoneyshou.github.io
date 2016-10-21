@@ -260,7 +260,7 @@ function LEI() {
                                                 <tr class='LEIUtilButtonsRow'>\
                                                     <td><input type='checkbox' id='incInv'><span style='color:#fff'>Include invisible questions</span></td>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
-                                                    <td><input type='button' value='Get Config Info' id='getConf' onclick='lpMTagDebug.getConfigInfo()'></td>\
+                                                    <td><input type='button' value='Get Login Policy' id='getConf' onclick='lpMTagDebug.scrapeLoginPolicy()'></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilBottomRow'>\
                                                     <td></td>\
@@ -695,6 +695,286 @@ function LEI() {
 
 
         this.showMsgWindow(false, 'Scraped Survey Info', html,{width: 500, height: 100});
+        return false;
+    };
+    // Login Policy Scraper
+    this.scrapeLoginPolicy = function () {
+        if (this.toolsShown) {
+            this.toggleTools();
+        }
+
+        if (this.logShown) {
+            this.toggleLog();
+        }
+
+        var that = this;
+
+        var html = '';
+
+        html = '<input type="button" value="Select All" id="selectAll" onclick ="lpMTagDebug.seletElContent(document.getElementById(\'LEILoginPolicyTbl\'))">\
+                <table>\
+                    <thead>\
+                    <tr>\
+                        <td class="LEILable" width="50%">Name</td>\
+                        <td class="LEILable" width="20%">Enabled?</td>\
+                        <td class="LEILable">Value</td>\
+                    </tr>\
+                    </thead>\
+                    <tbody id="LEILoginPolicyTbl">';
+
+        // Get config table
+        var confContainer = document.getElementsByClassName('bkgdeditTable');
+        var confTbls = confContainer[0].children[0].children[0].children[0].children;
+        
+        // Password Policy - Enabled
+        var pwPolicyTbl = confTbls[0];
+        var confName = "Password Policy";
+        var confEnabled = "No";
+        var confValue = "";
+        var enabledImg = pwPolicyTbl.children[0].children[2].children[2].chilren[0];
+        if (enabledImg.src.indexOf("grn") >= 0)
+        {
+            confEnabled = "Yes";
+        }
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        var confsPWP = pwPolicyTbl.children[0].children[3].children[0].children[0].children[0].children;
+        
+        // Password Policy - Minimum number of characters
+        var confMinChar = confsPWP[1];
+        confName = "Minimum number of characters";
+        var select = confMinChar.children[1].children[0];
+        var selectedIndex = confMinChar.children[1].children[0].selectedIndex;
+        confValue = select[selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Password Policy - Maximum sequential characters (e.g. abcde)
+        var confMaxSeqChar = confsPWP[2];
+        confName = "Maximum sequential characters (e.g. abcde)";
+        select = confMaxSeqChar.children[1].children[0];
+        selectedIndex = confMaxSeqChar.children[1].children[0].selectedIndex;
+        confValue = select[selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Password Policy - Maximum occurrences of same character
+        var confMaxSameChar = confsPWP[3];
+        confName = "Maximum sequential characters (e.g. abcde)";
+        select = confMaxSameChar.children[1].children[0];
+        selectedIndex = confMaxSameChar.children[1].children[0].selectedIndex;
+        confValue = select[selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Password Policy - Alpha character required
+        var confAlphaReq = confsPWP[4];
+        confName = "Alpha character required";
+        var confItem = confAlphaReq.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Password Policy - Number character required
+        var confNumReq = confsPWP[5];
+        confName = "Number character required";
+        var confItem = confNumReq.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Password Policy - Special character required
+        var confSpReq = confsPWP[6];
+        confName = "Special character required";
+        var confItem = confSpReq.children[0].children[0].children[0].children[0].children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Password Policy - Allow username in password
+        var confAllowUsr = confsPWP[7];
+        confName = "Number character required";
+        var confItem = confAllowUsr.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Restrict commonly used password phrases
+        var confRestComm = confsPWP[8];
+        confName = "Restrict commonly used password phrases";
+        var confItem = confRestComm.children[0].children[0].children[0].children[0].children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Apply policy to current passwords
+        var confAppCur = confsPWP[10];
+        confName = "Apply policy to current passwords";
+        var confItem = confAppCur.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Expires after number of days
+        var confExpDay = confsPWP[13];
+        confName = "Expires after number of days";
+        select = confExpDay.children[1].children[0];
+        selectedIndex = confExpDay.children[1].children[0].selectedIndex;
+        confValue = select[selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Notify users prior to expiration (days)
+        var confNotify = confsPWP[14];
+        confName = "Notify users prior to expiration (days)";
+        select = confNotify.children[1].children[0];
+        selectedIndex = confNotify.children[1].children[0].selectedIndex;
+        confValue = select[selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Notify via email
+        var confNotifyEml = confsPWP[16];
+        confName = "Notify via email";
+        var confItem = confNotifyEml.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Send to user's email address
+        var confSnedUsrEml = confsPWP[17];
+        confName = "Send to user's email address";
+        var confItem = confSnedUsrEml.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Send to this email address
+        var confSnedUsrEml = confsPWP[18];
+        confName = "Send to this email address";
+        var confItem = confSnedUsrEml.children[0].children[0];
+        var confExtra = confSnedUsrEml.children[1].children[0];
+        confValue = confItem.checked + " " + confExtra.value;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Notify via login alert
+        var confNotifyAlert = confsPWP[19];
+        confName = "Notify via login alert";
+        var confItem = confNotifyAlert.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Prevent using previous number passwords
+        var confPreNum = confsPWP[20];
+        confName = "Prevent using previous number passwords";
+        select = confPreNum.children[1].children[0];
+        selectedIndex = confPreNum.children[1].children[0].selectedIndex;
+        confValue = select[selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Maximum changes per day
+        var confMaxChange = confsPWP[21];
+        confName = "Maximum changes per day";
+        select = confMaxChange.children[1].children[0];
+        selectedIndex = confMaxChange.children[1].children[0].selectedIndex;
+        confValue = select[selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Allow operators to save password for next login
+        var confSavePwd = confsPWP[22];
+        confName = "Allow operators to save password for next login";
+        var confItem = confSavePwd.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        // Password Policy - Allow operators to save username for next login
+        var confSaveUsrname = confsPWP[23];
+        confName = "Allow operators to save username for next login";
+        var confItem = confSaveUsrname.children[0].children[0];
+        confValue = confItem.checked;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%">'+ confEnabled +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+        html += '</tbody></table>';
+
+        this.showMsgWindow(false, 'Scraped Login Policy', html,{width: 500, height: 100});
         return false;
     };
 
