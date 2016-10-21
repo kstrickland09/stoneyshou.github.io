@@ -988,6 +988,88 @@ function LEI() {
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
+        // Reset Password - Reset password notification email address:
+        confItem = confTbls[6].children[0].children[2].children[1].children[0];
+        confName = "Reset password notification email address:";
+        confValue = confItem.value;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Auto-Disable Operator Policy - Enabled
+        var autoDisOp = confTbls[8];
+        confName = "Auto-Disable Operator Policy";
+        confValue = "Disabled";
+        enabledImg = autoDisOp.children[1].children[1].children[2].children[0];
+        if (enabledImg.src.indexOf("grn") >= 0)
+        {
+            confValue = "Enabled";
+        }
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%" >'+ confValue +'</td>\
+                 </tr>';
+
+        // Auto-Disable Operator Policy - Automatically disable operators after number of inactive days:
+        confItem = autoDisOp.children[1].children[2].children[0].children[0].children[0].children[0].children[1].children[0];
+        confName = " - Automatically disable operators after number of inactive days:";
+        confValue = confItem.value;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Idle Operator Policy - Enabled
+        var idleOp = confTbls[10];
+        confName = "Idle Operator Policy";
+        confValue = "Disabled";
+        enabledImg = idleOp.children[1].children[1].children[2].children[0];
+        if (enabledImg.src.indexOf("grn") >= 0)
+        {
+            confValue = "Enabled";
+        }
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%" >'+ confValue +'</td>\
+                 </tr>';
+
+        // Idle Operator Policy - Automatic action when operator is logged in but idle:
+        confItem = idleOp.children[1].children[2].children[0].children[0].children[0].children[0];
+        confName = " - Automatic action when operator is logged in but idle:";
+        var radioNodes = confItem.children[1].childNodes;
+        for (var ni = 0; ni < radioNodes.length - 1; ni += 4) {
+            if(radioNodes[ni + 1].checked){
+                confValue = radioNodes[ni + 2];
+            }
+        }
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%" >'+ confValue +'</td>\
+                 </tr>';
+
+        // Idle Operator Policy - Logout operator from the account after minutes of inactivity:
+        confItem = idleOp.children[1].children[2].children[0].children[0].children[0].children[1];
+        confName = " - Logout operator from the account after minutes of inactivity:";
+        confValue = confItem.children[0].children[0].children[0].children[1].children[1].children[0].value;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%" >'+ confValue +'</td>\
+                 </tr>';
+        
+        // LivePerson Local Administrator Policy - Enabled
+        var localAdmin = confTbls[13];
+        confName = "LivePerson Local Administrator Policy";
+        confValue = "Disabled";
+        enabledImg = localAdmin.children[1].children[1].children[2].children[0];
+        if (enabledImg.src.indexOf("grn") >= 0)
+        {
+            confValue = "Enabled";
+        }
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%" >'+ confValue +'</td>\
+                 </tr>';
 
         // End of Table
         html += '</tbody></table>';
