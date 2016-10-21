@@ -770,7 +770,7 @@ function LEI() {
 
         // Password Policy - Maximum occurrences of same character
         var confMaxSameChar = confsPWP[3];
-        confName = "Maximum sequential characters (e.g. abcde)";
+        confName = "Maximum occurrences of same character";
         select = confMaxSameChar.children[1].children[0];
         selectedIndex = confMaxSameChar.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -823,7 +823,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Restrict commonly used password phrases
         var confRestComm = confsPWP[8];
@@ -835,7 +834,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Apply policy to current passwords
         var confAppCur = confsPWP[10];
@@ -847,7 +845,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Expires after number of days
         var confExpDay = confsPWP[13];
@@ -860,7 +857,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Notify users prior to expiration (days)
         var confNotify = confsPWP[14];
@@ -873,7 +869,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Notify via email
         var confNotifyEml = confsPWP[16];
@@ -885,7 +880,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Send to user's email address
         var confSnedUsrEml = confsPWP[17];
@@ -897,7 +891,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Send to this email address
         var confSnedUsrEml = confsPWP[18];
@@ -910,7 +903,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Notify via login alert
         var confNotifyAlert = confsPWP[19];
@@ -922,7 +914,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Prevent using previous number passwords
         var confPreNum = confsPWP[20];
@@ -935,7 +926,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Maximum changes per day
         var confMaxChange = confsPWP[21];
@@ -948,7 +938,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Allow operators to save password for next login
         var confSavePwd = confsPWP[22];
@@ -960,7 +949,6 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
-        html += '</tbody></table>';
 
         // Password Policy - Allow operators to save username for next login
         var confSaveUsrname = confsPWP[23];
@@ -972,6 +960,8 @@ function LEI() {
         html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
+
+
         html += '</tbody></table>';
 
         this.showMsgWindow(false, 'Scraped Login Policy', html,{width: 500, height: 100});
