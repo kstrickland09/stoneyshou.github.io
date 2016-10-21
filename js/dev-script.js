@@ -716,8 +716,7 @@ function LEI() {
                     <thead>\
                     <tr>\
                         <td class="LEILable" width="50%">Name</td>\
-                        <td class="LEILable" width="20%">Enabled?</td>\
-                        <td class="LEILable">Value</td>\
+                        <td class="LEILable" width="20%">Value</td>\
                     </tr>\
                     </thead>\
                     <tbody id="LEILoginPolicyTbl">';
@@ -729,17 +728,16 @@ function LEI() {
         // Password Policy - Enabled
         var pwPolicyTbl = confTbls[0];
         var confName = "Password Policy";
-        var confEnabled = "No";
-        var confValue = "";
+        // var confEnabled = "No";
+        var confValue = "Disabled";
         var enabledImg = pwPolicyTbl.children[0].children[2].children[2].children[0];
         if (enabledImg.src.indexOf("grn") >= 0)
         {
-            confEnabled = "Yes";
+            confValue = "Enabled";
         }
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
-        html += '   <td >'+ confValue +'</td>\
+        html += '   <td width="20%" >'+ confValue +'</td>\
                  </tr>';
 
         var confsPWP = pwPolicyTbl.children[0].children[3].children[0].children[0].children[0].children;
@@ -752,7 +750,6 @@ function LEI() {
         confValue = select[selectedIndex].text;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -764,7 +761,6 @@ function LEI() {
         confValue = select[selectedIndex].text;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -776,7 +772,6 @@ function LEI() {
         confValue = select[selectedIndex].text;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -787,7 +782,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -798,7 +792,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -809,7 +802,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -820,7 +812,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -831,7 +822,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -842,7 +832,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -854,7 +843,6 @@ function LEI() {
         confValue = select[selectedIndex].text;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -866,7 +854,6 @@ function LEI() {
         confValue = select[selectedIndex].text;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -877,7 +864,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -888,7 +874,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -900,7 +885,6 @@ function LEI() {
         confValue = confItem.checked + " " + confExtra.value;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -911,7 +895,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -923,7 +906,6 @@ function LEI() {
         confValue = select[selectedIndex].text;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -935,7 +917,6 @@ function LEI() {
         confValue = select[selectedIndex].text;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -946,7 +927,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
@@ -957,7 +937,6 @@ function LEI() {
         confValue = confItem.checked;
         html += '<tr>\
                     <td width="50%">'+ confName +'</td>';
-        html += '   <td width="20%">'+ confEnabled +'</td>';
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
