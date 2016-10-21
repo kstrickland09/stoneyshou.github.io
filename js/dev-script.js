@@ -988,7 +988,7 @@ function LEI() {
         var radioNodes = confItem.children[1].childNodes;
         for (var ni = 0; ni < radioNodes.length - 1; ni += 4) {
             if(radioNodes[ni + 1].checked){
-                confValue = radioNodes[ni + 2];
+                confValue = radioNodes[ni + 2].toString();
             }
         }
         html += '<tr>\
