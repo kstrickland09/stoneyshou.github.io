@@ -260,7 +260,7 @@ function LEI() {
                                                 <tr class='LEIUtilButtonsRow'>\
                                                     <td><input type='checkbox' id='incInv'><span style='color:#fff'>Include invisible questions</span></td>\
                                                     <td><input type='button' value='Scrape Survey' id='surveyScraper' onclick='lpMTagDebug.scrapeSurvey()'></td>\
-                                                    <td><input type='button' value='Get Login Policy' id='getConf' onclick='lpMTagDebug.scrapeLoginPolicy()'></td>\
+                                                    <td><input type='button' value='Scrape Login Policy' id='getConf' onclick='lpMTagDebug.scrapeLoginPolicy()'></td>\
                                                 </tr>\
                                                 <tr class='LEIUtilBottomRow'>\
                                                     <td></td>\
@@ -744,7 +744,7 @@ function LEI() {
         
         // Password Policy - Minimum number of characters
         var confMinChar = confsPWP[1];
-        confName = "Minimum number of characters";
+        confName = " - Minimum number of characters";
         var select = confMinChar.children[1].children[0];
         var selectedIndex = confMinChar.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -755,7 +755,7 @@ function LEI() {
 
         // Password Policy - Maximum sequential characters (e.g. abcde)
         var confMaxSeqChar = confsPWP[2];
-        confName = "Maximum sequential characters (e.g. abcde)";
+        confName = " - Maximum sequential characters (e.g. abcde)";
         select = confMaxSeqChar.children[1].children[0];
         selectedIndex = confMaxSeqChar.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -766,7 +766,7 @@ function LEI() {
 
         // Password Policy - Maximum occurrences of same character
         var confMaxSameChar = confsPWP[3];
-        confName = "Maximum occurrences of same character";
+        confName = " - Maximum occurrences of same character";
         select = confMaxSameChar.children[1].children[0];
         selectedIndex = confMaxSameChar.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -777,7 +777,7 @@ function LEI() {
 
         // Password Policy - Alpha character required
         var confAlphaReq = confsPWP[4];
-        confName = "Alpha character required";
+        confName = " - Alpha character required";
         var confItem = confAlphaReq.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -787,7 +787,7 @@ function LEI() {
 
         // Password Policy - Number character required
         var confNumReq = confsPWP[5];
-        confName = "Number character required";
+        confName = " - Number character required";
         var confItem = confNumReq.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -797,7 +797,7 @@ function LEI() {
 
         // Password Policy - Special character required
         var confSpReq = confsPWP[6];
-        confName = "Special character required";
+        confName = " - Special character required";
         var confItem = confSpReq.children[0].children[0].children[0].children[0].children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -807,7 +807,7 @@ function LEI() {
 
         // Password Policy - Allow username in password
         var confAllowUsr = confsPWP[7];
-        confName = "Number character required";
+        confName = " - Number character required";
         var confItem = confAllowUsr.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -817,7 +817,7 @@ function LEI() {
 
         // Password Policy - Restrict commonly used password phrases
         var confRestComm = confsPWP[8];
-        confName = "Restrict commonly used password phrases";
+        confName = " - Restrict commonly used password phrases";
         var confItem = confRestComm.children[0].children[0].children[0].children[0].children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -827,7 +827,7 @@ function LEI() {
 
         // Password Policy - Apply policy to current passwords
         var confAppCur = confsPWP[10];
-        confName = "Apply policy to current passwords";
+        confName = " - Apply policy to current passwords";
         var confItem = confAppCur.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -837,7 +837,7 @@ function LEI() {
 
         // Password Policy - Expires after number of days
         var confExpDay = confsPWP[13];
-        confName = "Expires after number of days";
+        confName = " - Expires after number of days";
         select = confExpDay.children[1].children[0];
         selectedIndex = confExpDay.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -848,7 +848,7 @@ function LEI() {
 
         // Password Policy - Notify users prior to expiration (days)
         var confNotify = confsPWP[14];
-        confName = "Notify users prior to expiration (days)";
+        confName = " - Notify users prior to expiration (days)";
         select = confNotify.children[1].children[0];
         selectedIndex = confNotify.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -859,7 +859,7 @@ function LEI() {
 
         // Password Policy - Notify via email
         var confNotifyEml = confsPWP[16];
-        confName = "Notify via email";
+        confName = " - Notify via email";
         var confItem = confNotifyEml.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -869,7 +869,7 @@ function LEI() {
 
         // Password Policy - Send to user's email address
         var confSnedUsrEml = confsPWP[17];
-        confName = "Send to user's email address";
+        confName = " - Send to user's email address";
         var confItem = confSnedUsrEml.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -879,7 +879,7 @@ function LEI() {
 
         // Password Policy - Send to this email address
         var confSnedUsrEml = confsPWP[18];
-        confName = "Send to this email address";
+        confName = " - Send to this email address";
         var confItem = confSnedUsrEml.children[0].children[0];
         var confExtra = confSnedUsrEml.children[1].children[0];
         confValue = confItem.checked + " " + confExtra.value;
@@ -890,7 +890,7 @@ function LEI() {
 
         // Password Policy - Notify via login alert
         var confNotifyAlert = confsPWP[19];
-        confName = "Notify via login alert";
+        confName = " - Notify via login alert";
         var confItem = confNotifyAlert.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -900,7 +900,7 @@ function LEI() {
 
         // Password Policy - Prevent using previous number passwords
         var confPreNum = confsPWP[20];
-        confName = "Prevent using previous number passwords";
+        confName = " - Prevent using previous number passwords";
         select = confPreNum.children[1].children[0];
         selectedIndex = confPreNum.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -911,7 +911,7 @@ function LEI() {
 
         // Password Policy - Maximum changes per day
         var confMaxChange = confsPWP[21];
-        confName = "Maximum changes per day";
+        confName = " - Maximum changes per day";
         select = confMaxChange.children[1].children[0];
         selectedIndex = confMaxChange.children[1].children[0].selectedIndex;
         confValue = select[selectedIndex].text;
@@ -922,7 +922,7 @@ function LEI() {
 
         // Password Policy - Allow operators to save password for next login
         var confSavePwd = confsPWP[22];
-        confName = "Allow operators to save password for next login";
+        confName = " - Allow operators to save password for next login";
         var confItem = confSavePwd.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -932,7 +932,7 @@ function LEI() {
 
         // Password Policy - Allow operators to save username for next login
         var confSaveUsrname = confsPWP[23];
-        confName = "Allow operators to save username for next login";
+        confName = " - Allow operators to save username for next login";
         var confItem = confSaveUsrname.children[0].children[0];
         confValue = confItem.checked;
         html += '<tr>\
@@ -940,7 +940,56 @@ function LEI() {
         html += '   <td >'+ confValue +'</td>\
                  </tr>';
 
+        // IP Policy - Enabled
+        var ipPolicyTbl = confTbls[2];
+        confName = "IP Policy";
+        confValue = "Disabled";
+        enabledImg = ipPolicyTbl.children[0].children[1].children[2].children[0];
+        if (enabledImg.src.indexOf("grn") >= 0)
+        {
+            confValue = "Enabled";
+        }
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%" >'+ confValue +'</td>\
+                 </tr>';
 
+        // Failed Login Policy - Enabled
+        var failPolicyTbl = confTbls[4];
+        confName = "Failed Login Policy";
+        confValue = "Disabled";
+        enabledImg = failPolicyTbl.children[1].children[1].children[2].children[0];
+        if (enabledImg.src.indexOf("grn") >= 0)
+        {
+            confValue = "Enabled";
+        }
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td width="20%" >'+ confValue +'</td>\
+                 </tr>';
+
+        // Failed Login Policy - Automatically disable operator after number of failed logins:
+        var confAutoDis = failPolicyTbl.children[1].children[2];
+        confName = " - Automatically disable operator after number of failed logins:";
+        select = confAutoDis.children[0].children[0].children[0].children[0].children[1].children[0];
+        confValue = select[select.selectedIndex].text;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+        // Failed Login Policy - Number of minutes before re-enabling disabled operator:
+        var confReEnable = failPolicyTbl.children[1].children[2].children[0].children[0].children[0].children[1];
+        confName = " - Number of minutes before re-enabling disabled operator:";
+        confItem = confReEnable.children[0].children[0].children[0].children[0].children[1].children[0];
+        confValue = confItem.value;
+        html += '<tr>\
+                    <td width="50%">'+ confName +'</td>';
+        html += '   <td >'+ confValue +'</td>\
+                 </tr>';
+
+
+        // End of Table
         html += '</tbody></table>';
 
         this.showMsgWindow(false, 'Scraped Login Policy', html,{width: 500, height: 100});
